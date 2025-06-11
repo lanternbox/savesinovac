@@ -203,8 +203,37 @@ export interface Page {
             blockType: 'HomeHeader';
           }
         | {
-            paragraph?: string | null;
-            'paragraph-2'?: string | null;
+            image?: (number | null) | Media;
+            body?: {
+              root: {
+                type: string;
+                children: {
+                  type: string;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            'body-2'?: {
+              root: {
+                type: string;
+                children: {
+                  type: string;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'HomeIntro';
@@ -531,8 +560,9 @@ export interface PagesSelect<T extends boolean = true> {
         HomeIntro?:
           | T
           | {
-              paragraph?: T;
-              'paragraph-2'?: T;
+              image?: T;
+              body?: T;
+              'body-2'?: T;
               id?: T;
               blockName?: T;
             };

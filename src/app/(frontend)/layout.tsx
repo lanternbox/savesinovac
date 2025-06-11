@@ -3,7 +3,7 @@ import "@/devlink/global.css";
 // import "@/styles/relumeGlobalStyles.css";
 // import "@/styles/styleGuide.css";
 // import "@/styles/tailwindShadcn.scss";
-// import "@/styles/custom.scss";
+import "@/styles/custom.scss";
 
 import Script from "next/script";
 

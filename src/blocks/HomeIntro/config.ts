@@ -4,13 +4,18 @@ export const HomeIntro: Block = {
   slug: "HomeIntro",
   fields: [
     {
-      name: "paragraph",
-      type: "text",
+      name: "image",
+      type: "upload",
+      relationTo: "media",
+    },
+    {
+      name: "body",
+      type: "richText",
       localized: true,
     },
     {
-      name: "paragraph-2",
-      type: "text",
+      name: "body-2",
+      type: "richText",
       localized: true,
     },
   ],

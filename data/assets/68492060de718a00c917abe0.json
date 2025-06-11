@@ -1,0 +1,54 @@
+{
+  "id": "68492060de718a00c917abe0",
+  "originalFileName": "68492060de718a00c917abe0_Sinovac-Rght.jpg",
+  "displayName": "Sinovac-Rght.jpg",
+  "contentType": "image/jpeg",
+  "size": 220757,
+  "siteId": "68492060de718a00c917aad2",
+  "createdOn": "2025-06-05T15:51:02.135Z",
+  "lastUpdated": "2025-06-11T06:21:23.333Z",
+  "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abe0_Sinovac-Rght.jpg",
+  "variants": [
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abe0_Sinovac-Rght-p-500.jpg",
+      "originalFileName": "Sinovac-Rght-p-500.jpg",
+      "displayName": "68492060de718a00c917abe0_Sinovac-Rght-p-500.jpg",
+      "format": "jpg",
+      "width": 500,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abe0_Sinovac-Rght-p-800.jpg",
+      "originalFileName": "Sinovac-Rght-p-800.jpg",
+      "displayName": "68492060de718a00c917abe0_Sinovac-Rght-p-800.jpg",
+      "format": "jpg",
+      "width": 800,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abe0_Sinovac-Rght-p-1080.jpg",
+      "originalFileName": "Sinovac-Rght-p-1080.jpg",
+      "displayName": "68492060de718a00c917abe0_Sinovac-Rght-p-1080.jpg",
+      "format": "jpg",
+      "width": 1080,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abe0_Sinovac-Rght-p-130x130q80.jpg",
+      "originalFileName": "Sinovac-Rght-p-130x130q80.jpg",
+      "displayName": "68492060de718a00c917abe0_Sinovac-Rght-p-130x130q80.jpg",
+      "format": "jpg",
+      "width": null,
+      "height": null,
+      "quality": null,
+      "error": null
+    }
+  ],
+  "altText": null
+}

@@ -1,0 +1,74 @@
+{
+  "id": "68492060de718a00c917abdb",
+  "originalFileName": "68492060de718a00c917abdb_Sinovax-Header-3.jpg",
+  "displayName": "Sinovax-Header-3.jpg",
+  "contentType": "image/jpeg",
+  "size": 454114,
+  "siteId": "68492060de718a00c917aad2",
+  "createdOn": "2025-06-02T18:02:58.804Z",
+  "lastUpdated": "2025-06-11T06:21:23.336Z",
+  "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abdb_Sinovax-Header-3.jpg",
+  "variants": [
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abdb_Sinovax-Header-3-p-500.jpg",
+      "originalFileName": "Sinovax-Header-3-p-500.jpg",
+      "displayName": "68492060de718a00c917abdb_Sinovax-Header-3-p-500.jpg",
+      "format": "jpg",
+      "width": 500,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abdb_Sinovax-Header-3-p-800.jpg",
+      "originalFileName": "Sinovax-Header-3-p-800.jpg",
+      "displayName": "68492060de718a00c917abdb_Sinovax-Header-3-p-800.jpg",
+      "format": "jpg",
+      "width": 800,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abdb_Sinovax-Header-3-p-1080.jpg",
+      "originalFileName": "Sinovax-Header-3-p-1080.jpg",
+      "displayName": "68492060de718a00c917abdb_Sinovax-Header-3-p-1080.jpg",
+      "format": "jpg",
+      "width": 1080,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abdb_Sinovax-Header-3-p-1600.jpg",
+      "originalFileName": "Sinovax-Header-3-p-1600.jpg",
+      "displayName": "68492060de718a00c917abdb_Sinovax-Header-3-p-1600.jpg",
+      "format": "jpg",
+      "width": 1600,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abdb_Sinovax-Header-3-p-2000.jpg",
+      "originalFileName": "Sinovax-Header-3-p-2000.jpg",
+      "displayName": "68492060de718a00c917abdb_Sinovax-Header-3-p-2000.jpg",
+      "format": "jpg",
+      "width": 2000,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abdb_Sinovax-Header-3-p-130x130q80.jpg",
+      "originalFileName": "Sinovax-Header-3-p-130x130q80.jpg",
+      "displayName": "68492060de718a00c917abdb_Sinovax-Header-3-p-130x130q80.jpg",
+      "format": "jpg",
+      "width": null,
+      "height": null,
+      "quality": null,
+      "error": null
+    }
+  ],
+  "altText": null
+}

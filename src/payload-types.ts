@@ -68,23 +68,8 @@ export interface Config {
   blocks: {};
   collections: {
     pages: Page;
-    'advisory-subcategory': AdvisorySubcategory;
-    advisory: Advisory;
-    'class-news': ClassNew;
-    'classification-ships': ClassificationShip;
-    classifications: Classification;
-    compliance: Compliance;
-    locations: Location;
-    news: News;
-    pdf: Pdf;
-    'portal-resources': PortalResource;
-    regulations: Regulation;
-    'regulatory-updates': RegulatoryUpdate;
-    'research-programs': ResearchProgram;
-    'research-report-categories': ResearchReportCategory;
-    'research-reports': ResearchReport;
-    software: Software;
-    'training-course-categories': TrainingCourseCategory;
+    'homepage-blocks': HomepageBlock;
+    resources: Resource;
     media: Media;
     users: User;
     'payload-locked-documents': PayloadLockedDocument;
@@ -94,23 +79,8 @@ export interface Config {
   collectionsJoins: {};
   collectionsSelect: {
     pages: PagesSelect<false> | PagesSelect<true>;
-    'advisory-subcategory': AdvisorySubcategorySelect<false> | AdvisorySubcategorySelect<true>;
-    advisory: AdvisorySelect<false> | AdvisorySelect<true>;
-    'class-news': ClassNewsSelect<false> | ClassNewsSelect<true>;
-    'classification-ships': ClassificationShipsSelect<false> | ClassificationShipsSelect<true>;
-    classifications: ClassificationsSelect<false> | ClassificationsSelect<true>;
-    compliance: ComplianceSelect<false> | ComplianceSelect<true>;
-    locations: LocationsSelect<false> | LocationsSelect<true>;
-    news: NewsSelect<false> | NewsSelect<true>;
-    pdf: PdfSelect<false> | PdfSelect<true>;
-    'portal-resources': PortalResourcesSelect<false> | PortalResourcesSelect<true>;
-    regulations: RegulationsSelect<false> | RegulationsSelect<true>;
-    'regulatory-updates': RegulatoryUpdatesSelect<false> | RegulatoryUpdatesSelect<true>;
-    'research-programs': ResearchProgramsSelect<false> | ResearchProgramsSelect<true>;
-    'research-report-categories': ResearchReportCategoriesSelect<false> | ResearchReportCategoriesSelect<true>;
-    'research-reports': ResearchReportsSelect<false> | ResearchReportsSelect<true>;
-    software: SoftwareSelect<false> | SoftwareSelect<true>;
-    'training-course-categories': TrainingCourseCategoriesSelect<false> | TrainingCourseCategoriesSelect<true>;
+    'homepage-blocks': HomepageBlocksSelect<false> | HomepageBlocksSelect<true>;
+    resources: ResourcesSelect<false> | ResourcesSelect<true>;
     media: MediaSelect<false> | MediaSelect<true>;
     users: UsersSelect<false> | UsersSelect<true>;
     'payload-locked-documents': PayloadLockedDocumentsSelect<false> | PayloadLockedDocumentsSelect<true>;
@@ -171,7 +141,130 @@ export interface Page {
   } | null;
   path?: string | null;
   fullTitle?: string | null;
-  content?: unknown[] | null;
+  content?:
+    | (
+        | {
+            heading?: string | null;
+            paragraph?: string | null;
+            link?: {
+              href?: string | null;
+              text?: string | null;
+            };
+            'paragraph-2'?: string | null;
+            'link-2'?: {
+              href?: string | null;
+              text?: string | null;
+            };
+            'paragraph-3'?: string | null;
+            'link-3'?: {
+              href?: string | null;
+              text?: string | null;
+            };
+            image?: (number | null) | Media;
+            'link-4'?: {
+              href?: string | null;
+              text?: string | null;
+            };
+            'link-5'?: {
+              href?: string | null;
+              text?: string | null;
+            };
+            'link-6'?: {
+              href?: string | null;
+              text?: string | null;
+            };
+            'link-7'?: {
+              href?: string | null;
+              text?: string | null;
+            };
+            'link-8'?: {
+              href?: string | null;
+              text?: string | null;
+            };
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'Footer';
+          }
+        | {
+            heading?: string | null;
+            'heading-2'?: string | null;
+            'heading-3'?: string | null;
+            image?: (number | null) | Media;
+            'heading-4'?: string | null;
+            body?: {
+              root: {
+                type: string;
+                children: {
+                  type: string;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            link?: {
+              href?: string | null;
+              text?: string | null;
+            };
+            'image-2'?: (number | null) | Media;
+            'image-3'?: (number | null) | Media;
+            'heading-5'?: string | null;
+            'link-2'?: {
+              href?: string | null;
+              text?: string | null;
+            };
+            'image-4'?: (number | null) | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'HomeBlocksDs';
+          }
+        | {
+            heading?: string | null;
+            image?: (number | null) | Media;
+            paragraph?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'HomeHeader';
+          }
+        | {
+            paragraph?: string | null;
+            'paragraph-2'?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'HomeIntro';
+          }
+        | {
+            heading?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'HomeResourcesDs';
+          }
+        | {
+            image?: (number | null) | Media;
+            link?: {
+              href?: string | null;
+              text?: string | null;
+            };
+            navbarLink?: string | null;
+            'navbarLink-2'?: string | null;
+            'navbarLink-3'?: string | null;
+            'navbarLink-4'?: string | null;
+            'navbarLink-5'?: string | null;
+            'link-2'?: {
+              href?: string | null;
+              text?: string | null;
+            };
+            'image-2'?: (number | null) | Media;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'Navbar';
+          }
+      )[]
+    | null;
   seo?: {
     title?: string | null;
     description?: string | null;
@@ -185,115 +278,6 @@ export interface Page {
         id?: string | null;
       }[]
     | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "advisory-subcategory".
- */
-export interface AdvisorySubcategory {
-  id: number;
-  /**
-   * The original Webflow ID for this item
-   */
-  webflowId?: string | null;
-  name: string;
-  slug: string;
-  order?: number | null;
-  parent?: (number | null) | Advisory;
-  excerpt?: string | null;
-  link?: string | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "advisory".
- */
-export interface Advisory {
-  id: number;
-  /**
-   * The original Webflow ID for this item
-   */
-  webflowId?: string | null;
-  name: string;
-  slug: string;
-  'is-promoted'?: string | null;
-  order?: number | null;
-  excerpt?: string | null;
-  body?: {
-    root: {
-      type: string;
-      children: {
-        type: string;
-        version: number;
-        [k: string]: unknown;
-      }[];
-      direction: ('ltr' | 'rtl') | null;
-      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-      indent: number;
-      version: number;
-    };
-    [k: string]: unknown;
-  } | null;
-  'service-description'?: {
-    root: {
-      type: string;
-      children: {
-        type: string;
-        version: number;
-        [k: string]: unknown;
-      }[];
-      direction: ('ltr' | 'rtl') | null;
-      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-      indent: number;
-      version: number;
-    };
-    [k: string]: unknown;
-  } | null;
-  link?: string | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "class-news".
- */
-export interface ClassNew {
-  id: number;
-  /**
-   * The original Webflow ID for this item
-   */
-  webflowId?: string | null;
-  name: string;
-  slug: string;
-  date?: string | null;
-  issue?: string | null;
-  image?: (number | null) | Media;
-  category?:
-    | (
-        | 'Maritime rules and safety'
-        | 'Passenger ship'
-        | 'Maritime energy transition'
-        | 'Classification and certification'
-      )
-    | null;
-  body?: {
-    root: {
-      type: string;
-      children: {
-        type: string;
-        version: number;
-        [k: string]: unknown;
-      }[];
-      direction: ('ltr' | 'rtl') | null;
-      format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-      indent: number;
-      version: number;
-    };
-    [k: string]: unknown;
-  } | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -384,9 +368,9 @@ export interface Media {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "classification-ships".
+ * via the `definition` "homepage-blocks".
  */
-export interface ClassificationShip {
+export interface HomepageBlock {
   id: number;
   /**
    * The original Webflow ID for this item
@@ -395,95 +379,10 @@ export interface ClassificationShip {
   name: string;
   slug: string;
   order?: number | null;
-  image?: (number | null) | Media;
-  link?: string | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "classifications".
- */
-export interface Classification {
-  id: number;
-  /**
-   * The original Webflow ID for this item
-   */
-  webflowId?: string | null;
-  name: string;
-  slug: string;
-  order?: number | null;
-  image?: (number | null) | Media;
-  'link-url'?: string | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "compliance".
- */
-export interface Compliance {
-  id: number;
-  /**
-   * The original Webflow ID for this item
-   */
-  webflowId?: string | null;
-  name: string;
-  slug: string;
-  category?: ('欧盟 Fit for 55' | 'IMO' | '欧盟拆船法规') | null;
-  order?: number | null;
-  'name-2'?: string | null;
-  excerpt?: string | null;
-  link?: string | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "locations".
- */
-export interface Location {
-  id: number;
-  /**
-   * The original Webflow ID for this item
-   */
-  webflowId?: string | null;
-  name: string;
-  slug: string;
-  order?: number | null;
-  title?: string | null;
-  'title-2'?: string | null;
-  address?: string | null;
-  'postal-code'?: string | null;
-  phone?: string | null;
-  fax?: string | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "news".
- */
-export interface News {
-  id: number;
-  /**
-   * The original Webflow ID for this item
-   */
-  webflowId?: string | null;
-  name: string;
-  slug: string;
-  date?: string | null;
-  issue?: string | null;
-  image?: (number | null) | Media;
-  category?:
-    | (
-        | 'Maritime rules and safety'
-        | 'Passenger ship'
-        | 'Maritime energy transition'
-        | 'Classification and certification'
-      )
-    | null;
-  body?: {
+  'show-checkbox-or-red-x'?: ('Red X' | 'Green Checkbox') | null;
+  'icon-logo'?: (number | null) | Media;
+  'invert-icon'?: string | null;
+  'block-copy'?: {
     root: {
       type: string;
       children: {
@@ -499,14 +398,18 @@ export interface News {
     [k: string]: unknown;
   } | null;
   link?: string | null;
+  'background-color'?: string | null;
+  'text-color'?: string | null;
+  'border-color'?: string | null;
+  'background-image'?: (number | null) | Media;
   updatedAt: string;
   createdAt: string;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "pdf".
+ * via the `definition` "resources".
  */
-export interface Pdf {
+export interface Resource {
   id: number;
   /**
    * The original Webflow ID for this item
@@ -515,150 +418,13 @@ export interface Pdf {
   name: string;
   slug: string;
   order?: number | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "portal-resources".
- */
-export interface PortalResource {
-  id: number;
-  /**
-   * The original Webflow ID for this item
-   */
-  webflowId?: string | null;
-  name: string;
-  slug: string;
-  order?: number | null;
-  excerpt?: string | null;
-  link?: string | null;
-  'link-text'?: string | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "regulations".
- */
-export interface Regulation {
-  id: number;
-  /**
-   * The original Webflow ID for this item
-   */
-  webflowId?: string | null;
-  name: string;
-  slug: string;
-  code?: string | null;
-  date?: string | null;
-  category?: ('LR规则' | '指南说明' | '船舶材料与资格程序') | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "regulatory-updates".
- */
-export interface RegulatoryUpdate {
-  id: number;
-  /**
-   * The original Webflow ID for this item
-   */
-  webflowId?: string | null;
-  name: string;
-  slug: string;
-  date?: string | null;
-  image?: (number | null) | Media;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "research-programs".
- */
-export interface ResearchProgram {
-  id: number;
-  /**
-   * The original Webflow ID for this item
-   */
-  webflowId?: string | null;
-  name: string;
-  slug: string;
-  link?: string | null;
-  date?: string | null;
-  image?: (number | null) | Media;
-  'is-light-bg'?: string | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "research-report-categories".
- */
-export interface ResearchReportCategory {
-  id: number;
-  /**
-   * The original Webflow ID for this item
-   */
-  webflowId?: string | null;
-  name: string;
-  slug: string;
-  order?: number | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "research-reports".
- */
-export interface ResearchReport {
-  id: number;
-  /**
-   * The original Webflow ID for this item
-   */
-  webflowId?: string | null;
-  name: string;
-  slug: string;
-  link?: string | null;
-  category?: (number | null) | ResearchReportCategory;
-  date?: string | null;
-  image?: (number | null) | Media;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "software".
- */
-export interface Software {
-  id: number;
-  /**
-   * The original Webflow ID for this item
-   */
-  webflowId?: string | null;
-  name: string;
-  slug: string;
-  excerpt?: string | null;
-  order?: number | null;
-  link?: string | null;
-  updatedAt: string;
-  createdAt: string;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "training-course-categories".
- */
-export interface TrainingCourseCategory {
-  id: number;
-  /**
-   * The original Webflow ID for this item
-   */
-  webflowId?: string | null;
-  name: string;
-  slug: string;
-  order?: number | null;
-  image?: (number | null) | Media;
-  link2?: string | null;
+  'date-of-item-s-release'?: string | null;
+  'type-of-item'?:
+    | ('Press Releases' | 'Media Coverage' | 'Important Filings' | 'Important Materials' | 'Presentations')
+    | null;
+  'news-or-material-link'?: string | null;
+  'downloadable-material-file'?: (number | null) | Media;
+  'source-name'?: string | null;
   updatedAt: string;
   createdAt: string;
 }
@@ -693,72 +459,12 @@ export interface PayloadLockedDocument {
         value: number | Page;
       } | null)
     | ({
-        relationTo: 'advisory-subcategory';
-        value: number | AdvisorySubcategory;
+        relationTo: 'homepage-blocks';
+        value: number | HomepageBlock;
       } | null)
     | ({
-        relationTo: 'advisory';
-        value: number | Advisory;
-      } | null)
-    | ({
-        relationTo: 'class-news';
-        value: number | ClassNew;
-      } | null)
-    | ({
-        relationTo: 'classification-ships';
-        value: number | ClassificationShip;
-      } | null)
-    | ({
-        relationTo: 'classifications';
-        value: number | Classification;
-      } | null)
-    | ({
-        relationTo: 'compliance';
-        value: number | Compliance;
-      } | null)
-    | ({
-        relationTo: 'locations';
-        value: number | Location;
-      } | null)
-    | ({
-        relationTo: 'news';
-        value: number | News;
-      } | null)
-    | ({
-        relationTo: 'pdf';
-        value: number | Pdf;
-      } | null)
-    | ({
-        relationTo: 'portal-resources';
-        value: number | PortalResource;
-      } | null)
-    | ({
-        relationTo: 'regulations';
-        value: number | Regulation;
-      } | null)
-    | ({
-        relationTo: 'regulatory-updates';
-        value: number | RegulatoryUpdate;
-      } | null)
-    | ({
-        relationTo: 'research-programs';
-        value: number | ResearchProgram;
-      } | null)
-    | ({
-        relationTo: 'research-report-categories';
-        value: number | ResearchReportCategory;
-      } | null)
-    | ({
-        relationTo: 'research-reports';
-        value: number | ResearchReport;
-      } | null)
-    | ({
-        relationTo: 'software';
-        value: number | Software;
-      } | null)
-    | ({
-        relationTo: 'training-course-categories';
-        value: number | TrainingCourseCategory;
+        relationTo: 'resources';
+        value: number | Resource;
       } | null)
     | ({
         relationTo: 'media';
@@ -822,7 +528,146 @@ export interface PagesSelect<T extends boolean = true> {
   redirectTo?: T;
   path?: T;
   fullTitle?: T;
-  content?: T | {};
+  content?:
+    | T
+    | {
+        Footer?:
+          | T
+          | {
+              heading?: T;
+              paragraph?: T;
+              link?:
+                | T
+                | {
+                    href?: T;
+                    text?: T;
+                  };
+              'paragraph-2'?: T;
+              'link-2'?:
+                | T
+                | {
+                    href?: T;
+                    text?: T;
+                  };
+              'paragraph-3'?: T;
+              'link-3'?:
+                | T
+                | {
+                    href?: T;
+                    text?: T;
+                  };
+              image?: T;
+              'link-4'?:
+                | T
+                | {
+                    href?: T;
+                    text?: T;
+                  };
+              'link-5'?:
+                | T
+                | {
+                    href?: T;
+                    text?: T;
+                  };
+              'link-6'?:
+                | T
+                | {
+                    href?: T;
+                    text?: T;
+                  };
+              'link-7'?:
+                | T
+                | {
+                    href?: T;
+                    text?: T;
+                  };
+              'link-8'?:
+                | T
+                | {
+                    href?: T;
+                    text?: T;
+                  };
+              id?: T;
+              blockName?: T;
+            };
+        HomeBlocksDs?:
+          | T
+          | {
+              heading?: T;
+              'heading-2'?: T;
+              'heading-3'?: T;
+              image?: T;
+              'heading-4'?: T;
+              body?: T;
+              link?:
+                | T
+                | {
+                    href?: T;
+                    text?: T;
+                  };
+              'image-2'?: T;
+              'image-3'?: T;
+              'heading-5'?: T;
+              'link-2'?:
+                | T
+                | {
+                    href?: T;
+                    text?: T;
+                  };
+              'image-4'?: T;
+              id?: T;
+              blockName?: T;
+            };
+        HomeHeader?:
+          | T
+          | {
+              heading?: T;
+              image?: T;
+              paragraph?: T;
+              id?: T;
+              blockName?: T;
+            };
+        HomeIntro?:
+          | T
+          | {
+              paragraph?: T;
+              'paragraph-2'?: T;
+              id?: T;
+              blockName?: T;
+            };
+        HomeResourcesDs?:
+          | T
+          | {
+              heading?: T;
+              id?: T;
+              blockName?: T;
+            };
+        Navbar?:
+          | T
+          | {
+              image?: T;
+              link?:
+                | T
+                | {
+                    href?: T;
+                    text?: T;
+                  };
+              navbarLink?: T;
+              'navbarLink-2'?: T;
+              'navbarLink-3'?: T;
+              'navbarLink-4'?: T;
+              'navbarLink-5'?: T;
+              'link-2'?:
+                | T
+                | {
+                    href?: T;
+                    text?: T;
+                  };
+              'image-2'?: T;
+              id?: T;
+              blockName?: T;
+            };
+      };
   seo?:
     | T
     | {
@@ -843,252 +688,39 @@ export interface PagesSelect<T extends boolean = true> {
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "advisory-subcategory_select".
+ * via the `definition` "homepage-blocks_select".
  */
-export interface AdvisorySubcategorySelect<T extends boolean = true> {
+export interface HomepageBlocksSelect<T extends boolean = true> {
   webflowId?: T;
   name?: T;
   slug?: T;
   order?: T;
-  parent?: T;
-  excerpt?: T;
+  'show-checkbox-or-red-x'?: T;
+  'icon-logo'?: T;
+  'invert-icon'?: T;
+  'block-copy'?: T;
   link?: T;
+  'background-color'?: T;
+  'text-color'?: T;
+  'border-color'?: T;
+  'background-image'?: T;
   updatedAt?: T;
   createdAt?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "advisory_select".
+ * via the `definition` "resources_select".
  */
-export interface AdvisorySelect<T extends boolean = true> {
-  webflowId?: T;
-  name?: T;
-  slug?: T;
-  'is-promoted'?: T;
-  order?: T;
-  excerpt?: T;
-  body?: T;
-  'service-description'?: T;
-  link?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "class-news_select".
- */
-export interface ClassNewsSelect<T extends boolean = true> {
-  webflowId?: T;
-  name?: T;
-  slug?: T;
-  date?: T;
-  issue?: T;
-  image?: T;
-  category?: T;
-  body?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "classification-ships_select".
- */
-export interface ClassificationShipsSelect<T extends boolean = true> {
+export interface ResourcesSelect<T extends boolean = true> {
   webflowId?: T;
   name?: T;
   slug?: T;
   order?: T;
-  image?: T;
-  link?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "classifications_select".
- */
-export interface ClassificationsSelect<T extends boolean = true> {
-  webflowId?: T;
-  name?: T;
-  slug?: T;
-  order?: T;
-  image?: T;
-  'link-url'?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "compliance_select".
- */
-export interface ComplianceSelect<T extends boolean = true> {
-  webflowId?: T;
-  name?: T;
-  slug?: T;
-  category?: T;
-  order?: T;
-  'name-2'?: T;
-  excerpt?: T;
-  link?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "locations_select".
- */
-export interface LocationsSelect<T extends boolean = true> {
-  webflowId?: T;
-  name?: T;
-  slug?: T;
-  order?: T;
-  title?: T;
-  'title-2'?: T;
-  address?: T;
-  'postal-code'?: T;
-  phone?: T;
-  fax?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "news_select".
- */
-export interface NewsSelect<T extends boolean = true> {
-  webflowId?: T;
-  name?: T;
-  slug?: T;
-  date?: T;
-  issue?: T;
-  image?: T;
-  category?: T;
-  body?: T;
-  link?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "pdf_select".
- */
-export interface PdfSelect<T extends boolean = true> {
-  webflowId?: T;
-  name?: T;
-  slug?: T;
-  order?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "portal-resources_select".
- */
-export interface PortalResourcesSelect<T extends boolean = true> {
-  webflowId?: T;
-  name?: T;
-  slug?: T;
-  order?: T;
-  excerpt?: T;
-  link?: T;
-  'link-text'?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "regulations_select".
- */
-export interface RegulationsSelect<T extends boolean = true> {
-  webflowId?: T;
-  name?: T;
-  slug?: T;
-  code?: T;
-  date?: T;
-  category?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "regulatory-updates_select".
- */
-export interface RegulatoryUpdatesSelect<T extends boolean = true> {
-  webflowId?: T;
-  name?: T;
-  slug?: T;
-  date?: T;
-  image?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "research-programs_select".
- */
-export interface ResearchProgramsSelect<T extends boolean = true> {
-  webflowId?: T;
-  name?: T;
-  slug?: T;
-  link?: T;
-  date?: T;
-  image?: T;
-  'is-light-bg'?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "research-report-categories_select".
- */
-export interface ResearchReportCategoriesSelect<T extends boolean = true> {
-  webflowId?: T;
-  name?: T;
-  slug?: T;
-  order?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "research-reports_select".
- */
-export interface ResearchReportsSelect<T extends boolean = true> {
-  webflowId?: T;
-  name?: T;
-  slug?: T;
-  link?: T;
-  category?: T;
-  date?: T;
-  image?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "software_select".
- */
-export interface SoftwareSelect<T extends boolean = true> {
-  webflowId?: T;
-  name?: T;
-  slug?: T;
-  excerpt?: T;
-  order?: T;
-  link?: T;
-  updatedAt?: T;
-  createdAt?: T;
-}
-/**
- * This interface was referenced by `Config`'s JSON-Schema
- * via the `definition` "training-course-categories_select".
- */
-export interface TrainingCourseCategoriesSelect<T extends boolean = true> {
-  webflowId?: T;
-  name?: T;
-  slug?: T;
-  order?: T;
-  image?: T;
-  link2?: T;
+  'date-of-item-s-release'?: T;
+  'type-of-item'?: T;
+  'news-or-material-link'?: T;
+  'downloadable-material-file'?: T;
+  'source-name'?: T;
   updatedAt?: T;
   createdAt?: T;
 }

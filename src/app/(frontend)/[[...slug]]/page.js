@@ -4,24 +4,22 @@ import { getItemData } from "@/utils/getItemData";
 import { redirect } from "next/navigation";
 
 // added block imports
-import { ClassNewsListDs } from "@/blocks/ClassNewsListDs";
-import { ComplianceMainDs } from "@/blocks/ComplianceMainDs";
-import { FooterG } from "@/blocks/FooterG";
-import { NavbarMobileG } from "@/blocks/NavbarMobileG";
-import { NavbarSpacerG } from "@/blocks/NavbarSpacerG";
-import { RegsLinks } from "@/blocks/RegsLinks";
-import { RegsListDs } from "@/blocks/RegsListDs";
+import { Footer } from "@/blocks/Footer";
+import { HomeBlocksDs } from "@/blocks/HomeBlocksDs";
+import { HomeHeader } from "@/blocks/HomeHeader";
+import { HomeIntro } from "@/blocks/HomeIntro";
+import { HomeResourcesDs } from "@/blocks/HomeResourcesDs";
+import { Navbar } from "@/blocks/Navbar";
 // end added block imports
 
 const blockComponents = {
   // added block component names
-  ClassNewsListDs,
-  ComplianceMainDs,
-  FooterG,
-  NavbarMobileG,
-  NavbarSpacerG,
-  RegsLinks,
-  RegsListDs,
+  Footer,
+  HomeBlocksDs,
+  HomeHeader,
+  HomeIntro,
+  HomeResourcesDs,
+  Navbar,
   // end added block component names
 };
 

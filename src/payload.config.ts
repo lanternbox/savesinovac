@@ -36,9 +36,12 @@ import { Pages } from "./collections/Pages";
 import { Media } from "./collections/Media";
 
 // added collection imports
+import { HomepageBlocks } from "./collections/HomepageBlocks";
+import { Resources } from "./collections/Resources";
 // end added collection imports
 
 // added global imports
+
 // end added global imports
 
 const filename = fileURLToPath(import.meta.url);
@@ -92,13 +95,15 @@ export default buildConfig({
   collections: [
     Pages,
     // added collections
-// end added collections
+    HomepageBlocks,
+    Resources,
+    // end added collections
     Media,
     Users,
   ],
   globals: [
     // added globals
-// end added globals
+    // end added globals
   ],
   // cors: [process.env.PAYLOAD_PUBLIC_SERVER_URL || ""].filter(Boolean),
   // csrf: [process.env.PAYLOAD_PUBLIC_SERVER_URL || ""].filter(Boolean),

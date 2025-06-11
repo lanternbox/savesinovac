@@ -1,0 +1,34 @@
+{
+  "id": "68492060de718a00c917ab86",
+  "originalFileName": "68492060de718a00c917ab86_press.png",
+  "displayName": "press.png",
+  "contentType": "image/png",
+  "size": 13243,
+  "siteId": "68492060de718a00c917aad2",
+  "createdOn": "2025-03-01T03:18:09.477Z",
+  "lastUpdated": "2025-06-11T06:21:22.466Z",
+  "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917ab86_press.png",
+  "variants": [
+    {
+      "hostedUrl": null,
+      "originalFileName": "press-p-500.png",
+      "displayName": "67951026b6639653619e42a8_press-p-500.png",
+      "format": "png",
+      "width": 500,
+      "height": null,
+      "quality": 100,
+      "error": "FILESIZE_EXCEEDS_CAP"
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917ab86_press-p-130x130q80.png",
+      "originalFileName": "press-p-130x130q80.png",
+      "displayName": "68492060de718a00c917ab86_press-p-130x130q80.png",
+      "format": "png",
+      "width": null,
+      "height": null,
+      "quality": null,
+      "error": null
+    }
+  ],
+  "altText": null
+}

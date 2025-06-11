@@ -6,6 +6,12 @@ import afterDeletePostToWebhook from "@/hooks/afterDeletePostToWebhook";
 import { isAdmin } from "@/access/isAdmin";
 
 // added block imports
+import { Footer } from "@/blocks/Footer/config";
+import { HomeBlocksDs } from "@/blocks/HomeBlocksDs/config";
+import { HomeHeader } from "@/blocks/HomeHeader/config";
+import { HomeIntro } from "@/blocks/HomeIntro/config";
+import { HomeResourcesDs } from "@/blocks/HomeResourcesDs/config";
+import { Navbar } from "@/blocks/Navbar/config";
 // end added block imports
 
 export const Pages: CollectionConfig = {
@@ -107,7 +113,13 @@ export const Pages: CollectionConfig = {
               type: "blocks",
               blocks: [
                 // added blocks
-// end added blocks
+                Footer,
+                HomeBlocksDs,
+                HomeHeader,
+                HomeIntro,
+                HomeResourcesDs,
+                Navbar
+                // end added blocks
               ],
             },
           ],

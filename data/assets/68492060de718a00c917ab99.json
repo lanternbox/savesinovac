@@ -1,0 +1,94 @@
+{
+  "id": "68492060de718a00c917ab99",
+  "originalFileName": "68492060de718a00c917ab99_TransformAGCO Fendt 2.jpg",
+  "displayName": "TransformAGCO Fendt 2.jpg",
+  "contentType": "image/jpeg",
+  "size": 2818579,
+  "siteId": "68492060de718a00c917aad2",
+  "createdOn": "2024-10-30T15:59:12.387Z",
+  "lastUpdated": "2025-06-11T06:21:22.664Z",
+  "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917ab99_TransformAGCO%20Fendt%202.jpg",
+  "variants": [
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917ab99_TransformAGCO%2520Fendt%25202-p-500.jpg",
+      "originalFileName": "TransformAGCO%20Fendt%202-p-500.jpg",
+      "displayName": "68492060de718a00c917ab99_TransformAGCO%20Fendt%202-p-500.jpg",
+      "format": "jpg",
+      "width": 500,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917ab99_TransformAGCO%2520Fendt%25202-p-800.jpg",
+      "originalFileName": "TransformAGCO%20Fendt%202-p-800.jpg",
+      "displayName": "68492060de718a00c917ab99_TransformAGCO%20Fendt%202-p-800.jpg",
+      "format": "jpg",
+      "width": 800,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917ab99_TransformAGCO%2520Fendt%25202-p-1080.jpg",
+      "originalFileName": "TransformAGCO%20Fendt%202-p-1080.jpg",
+      "displayName": "68492060de718a00c917ab99_TransformAGCO%20Fendt%202-p-1080.jpg",
+      "format": "jpg",
+      "width": 1080,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917ab99_TransformAGCO%2520Fendt%25202-p-1600.jpg",
+      "originalFileName": "TransformAGCO%20Fendt%202-p-1600.jpg",
+      "displayName": "68492060de718a00c917ab99_TransformAGCO%20Fendt%202-p-1600.jpg",
+      "format": "jpg",
+      "width": 1600,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917ab99_TransformAGCO%2520Fendt%25202-p-2000.jpg",
+      "originalFileName": "TransformAGCO%20Fendt%202-p-2000.jpg",
+      "displayName": "68492060de718a00c917ab99_TransformAGCO%20Fendt%202-p-2000.jpg",
+      "format": "jpg",
+      "width": 2000,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917ab99_TransformAGCO%2520Fendt%25202-p-2600.jpg",
+      "originalFileName": "TransformAGCO%20Fendt%202-p-2600.jpg",
+      "displayName": "68492060de718a00c917ab99_TransformAGCO%20Fendt%202-p-2600.jpg",
+      "format": "jpg",
+      "width": 2600,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917ab99_TransformAGCO%2520Fendt%25202-p-3200.jpg",
+      "originalFileName": "TransformAGCO%20Fendt%202-p-3200.jpg",
+      "displayName": "68492060de718a00c917ab99_TransformAGCO%20Fendt%202-p-3200.jpg",
+      "format": "jpg",
+      "width": 3200,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917ab99_TransformAGCO%20Fendt%202-p-130x130q80.jpg",
+      "originalFileName": "TransformAGCO Fendt 2-p-130x130q80.jpg",
+      "displayName": "68492060de718a00c917ab99_TransformAGCO Fendt 2-p-130x130q80.jpg",
+      "format": "jpg",
+      "width": null,
+      "height": null,
+      "quality": null,
+      "error": null
+    }
+  ],
+  "altText": null
+}

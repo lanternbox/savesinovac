@@ -1,0 +1,54 @@
+{
+  "id": "68492060de718a00c917abc1",
+  "originalFileName": "68492060de718a00c917abc1_Heartbeat.png",
+  "displayName": "Heartbeat.png",
+  "contentType": "image/png",
+  "size": 24793,
+  "siteId": "68492060de718a00c917aad2",
+  "createdOn": "2025-06-05T15:33:20.863Z",
+  "lastUpdated": "2025-06-11T06:21:23.257Z",
+  "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abc1_Heartbeat.png",
+  "variants": [
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abc1_Heartbeat-p-500.png",
+      "originalFileName": "Heartbeat-p-500.png",
+      "displayName": "68492060de718a00c917abc1_Heartbeat-p-500.png",
+      "format": "png",
+      "width": 500,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abc1_Heartbeat-p-800.png",
+      "originalFileName": "Heartbeat-p-800.png",
+      "displayName": "68492060de718a00c917abc1_Heartbeat-p-800.png",
+      "format": "png",
+      "width": 800,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abc1_Heartbeat-p-1080.png",
+      "originalFileName": "Heartbeat-p-1080.png",
+      "displayName": "68492060de718a00c917abc1_Heartbeat-p-1080.png",
+      "format": "png",
+      "width": 1080,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abc1_Heartbeat-p-130x130q80.png",
+      "originalFileName": "Heartbeat-p-130x130q80.png",
+      "displayName": "68492060de718a00c917abc1_Heartbeat-p-130x130q80.png",
+      "format": "png",
+      "width": null,
+      "height": null,
+      "quality": null,
+      "error": null
+    }
+  ],
+  "altText": null
+}

@@ -1,0 +1,34 @@
+{
+  "id": "68492060de718a00c917ab7f",
+  "originalFileName": "68492060de718a00c917ab7f_press-release.png",
+  "displayName": "press-release.png",
+  "contentType": "image/png",
+  "size": 8761,
+  "siteId": "68492060de718a00c917aad2",
+  "createdOn": "2025-03-01T03:18:09.466Z",
+  "lastUpdated": "2025-06-11T06:21:22.572Z",
+  "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917ab7f_press-release.png",
+  "variants": [
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917ab7f_press-release-p-500.png",
+      "originalFileName": "press-release-p-500.png",
+      "displayName": "68492060de718a00c917ab7f_press-release-p-500.png",
+      "format": "png",
+      "width": 500,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917ab7f_press-release-p-130x130q80.png",
+      "originalFileName": "press-release-p-130x130q80.png",
+      "displayName": "68492060de718a00c917ab7f_press-release-p-130x130q80.png",
+      "format": "png",
+      "width": null,
+      "height": null,
+      "quality": null,
+      "error": null
+    }
+  ],
+  "altText": null
+}

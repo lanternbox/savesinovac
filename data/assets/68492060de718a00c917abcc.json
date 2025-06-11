@@ -1,0 +1,54 @@
+{
+  "id": "68492060de718a00c917abcc",
+  "originalFileName": "68492060de718a00c917abcc_Save-Sinovax---Fellow-Shareholders.jpg",
+  "displayName": "Save-Sinovax---Fellow-Shareholders.jpg",
+  "contentType": "image/jpeg",
+  "size": 217305,
+  "siteId": "68492060de718a00c917aad2",
+  "createdOn": "2025-06-10T14:22:36.807Z",
+  "lastUpdated": "2025-06-11T06:21:23.318Z",
+  "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abcc_Save-Sinovax---Fellow-Shareholders.jpg",
+  "variants": [
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abcc_Save-Sinovax---Fellow-Shareholders-p-500.jpg",
+      "originalFileName": "Save-Sinovax---Fellow-Shareholders-p-500.jpg",
+      "displayName": "68492060de718a00c917abcc_Save-Sinovax---Fellow-Shareholders-p-500.jpg",
+      "format": "jpg",
+      "width": 500,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abcc_Save-Sinovax---Fellow-Shareholders-p-800.jpg",
+      "originalFileName": "Save-Sinovax---Fellow-Shareholders-p-800.jpg",
+      "displayName": "68492060de718a00c917abcc_Save-Sinovax---Fellow-Shareholders-p-800.jpg",
+      "format": "jpg",
+      "width": 800,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abcc_Save-Sinovax---Fellow-Shareholders-p-1080.jpg",
+      "originalFileName": "Save-Sinovax---Fellow-Shareholders-p-1080.jpg",
+      "displayName": "68492060de718a00c917abcc_Save-Sinovax---Fellow-Shareholders-p-1080.jpg",
+      "format": "jpg",
+      "width": 1080,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abcc_Save-Sinovax---Fellow-Shareholders-p-130x130q80.jpg",
+      "originalFileName": "Save-Sinovax---Fellow-Shareholders-p-130x130q80.jpg",
+      "displayName": "68492060de718a00c917abcc_Save-Sinovax---Fellow-Shareholders-p-130x130q80.jpg",
+      "format": "jpg",
+      "width": null,
+      "height": null,
+      "quality": null,
+      "error": null
+    }
+  ],
+  "altText": null
+}

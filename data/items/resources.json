@@ -1,0 +1,58 @@
+[
+  {
+    "id": "68492060de718a00c917aba9",
+    "cmsLocaleId": "68492060de718a00c917aad5",
+    "lastPublished": "2025-06-11T09:06:23.730Z",
+    "lastUpdated": "2025-06-10T17:09:39.043Z",
+    "createdOn": "2025-06-10T17:09:39.043Z",
+    "isArchived": false,
+    "isDraft": false,
+    "fieldData": {
+      "date-of-item-s-release": "2025-04-22T00:00:00.000Z",
+      "news-or-material-link": "https://www.globenewswire.com/news-release/2025/04/22/3065123/0/en/SINOVAC-Management-Statement-Regarding-Auditor-Resignation.html",
+      "type-of-item": "e2975900e6f6f35a1e66ddd68dd4a95a",
+      "source-name": "Globe Newswire",
+      "name": "SINOVAC Management Statement Regarding Auditor Resignation",
+      "slug": "sinovac-management-statement-regarding-auditor-resignation"
+    }
+  },
+  {
+    "id": "68492060de718a00c917ab8c",
+    "cmsLocaleId": "68492060de718a00c917aad5",
+    "lastPublished": "2025-06-11T09:06:23.730Z",
+    "lastUpdated": "2025-06-10T17:08:45.149Z",
+    "createdOn": "2025-06-10T17:08:45.149Z",
+    "isArchived": false,
+    "isDraft": false,
+    "fieldData": {
+      "date-of-item-s-release": "2025-04-25T00:00:00.000Z",
+      "type-of-item": "e2975900e6f6f35a1e66ddd68dd4a95a",
+      "source-name": "Prime Success, L.P.",
+      "name": "Letter to Sinovac Shareholders",
+      "downloadable-material-file": {
+        "fileId": "68492060de718a00c917ab4b",
+        "url": "https://cdn.prod.website-files.com/68492060de718a00c917aafe/68492060de718a00c917ab4b_Advantech%20-%20Letter%20to%20shareholders.pdf",
+        "alt": null
+      },
+      "slug": "letter-to-sinovac-shareholders"
+    }
+  },
+  {
+    "id": "68492060de718a00c917ab78",
+    "cmsLocaleId": "68492060de718a00c917aad5",
+    "lastPublished": "2025-06-11T09:06:23.730Z",
+    "lastUpdated": "2025-06-10T17:06:06.691Z",
+    "createdOn": "2025-06-10T14:33:26.467Z",
+    "isArchived": false,
+    "isDraft": false,
+    "fieldData": {
+      "name": "Vivo Capital Files Lawsuits to Protect Sinovac Shareholders from the New Board’s Value Destructive Actions",
+      "slug": "vivo-capital-files-lawsuits-to-protect-sinovac-shareholders-from-the-new-boards-value-destructive-actions",
+      "order": 1,
+      "date-of-item-s-release": "2025-04-23T00:00:00.000Z",
+      "news-or-material-link": "https://www.sec.gov/Archives/edgar/data/1084201/000121390025035118/ea023939301ex1-sinovac.htm",
+      "source-name": "SEC.gov",
+      "type-of-item": "e2975900e6f6f35a1e66ddd68dd4a95a"
+    }
+  }
+]

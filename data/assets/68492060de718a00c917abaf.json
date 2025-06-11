@@ -1,0 +1,24 @@
+{
+  "id": "68492060de718a00c917abaf",
+  "originalFileName": "68492060de718a00c917abaf_China-Flag.png",
+  "displayName": "China-Flag.png",
+  "contentType": "image/png",
+  "size": 7102,
+  "siteId": "68492060de718a00c917aad2",
+  "createdOn": "2025-06-05T14:36:41.632Z",
+  "lastUpdated": "2025-06-11T06:21:22.641Z",
+  "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abaf_China-Flag.png",
+  "variants": [
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abaf_China-Flag-p-130x130q80.png",
+      "originalFileName": "China-Flag-p-130x130q80.png",
+      "displayName": "68492060de718a00c917abaf_China-Flag-p-130x130q80.png",
+      "format": "png",
+      "width": null,
+      "height": null,
+      "quality": null,
+      "error": null
+    }
+  ],
+  "altText": null
+}

@@ -1,0 +1,74 @@
+{
+  "id": "68492060de718a00c917abb4",
+  "originalFileName": "68492060de718a00c917abb4_Nominees.jpg",
+  "displayName": "Nominees.jpg",
+  "contentType": "image/jpeg",
+  "size": 343012,
+  "siteId": "68492060de718a00c917aad2",
+  "createdOn": "2025-03-05T14:59:42.654Z",
+  "lastUpdated": "2025-06-11T06:21:23.339Z",
+  "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abb4_Nominees.jpg",
+  "variants": [
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abb4_Nominees-p-500.jpg",
+      "originalFileName": "Nominees-p-500.jpg",
+      "displayName": "68492060de718a00c917abb4_Nominees-p-500.jpg",
+      "format": "jpg",
+      "width": 500,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abb4_Nominees-p-800.jpg",
+      "originalFileName": "Nominees-p-800.jpg",
+      "displayName": "68492060de718a00c917abb4_Nominees-p-800.jpg",
+      "format": "jpg",
+      "width": 800,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abb4_Nominees-p-1080.jpg",
+      "originalFileName": "Nominees-p-1080.jpg",
+      "displayName": "68492060de718a00c917abb4_Nominees-p-1080.jpg",
+      "format": "jpg",
+      "width": 1080,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abb4_Nominees-p-1600.jpg",
+      "originalFileName": "Nominees-p-1600.jpg",
+      "displayName": "68492060de718a00c917abb4_Nominees-p-1600.jpg",
+      "format": "jpg",
+      "width": 1600,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abb4_Nominees-p-2000.jpg",
+      "originalFileName": "Nominees-p-2000.jpg",
+      "displayName": "68492060de718a00c917abb4_Nominees-p-2000.jpg",
+      "format": "jpg",
+      "width": 2000,
+      "height": null,
+      "quality": 100,
+      "error": null
+    },
+    {
+      "hostedUrl": "https://s3.amazonaws.com/webflow-prod-assets/68492060de718a00c917aad2/68492060de718a00c917abb4_Nominees-p-130x130q80.jpg",
+      "originalFileName": "Nominees-p-130x130q80.jpg",
+      "displayName": "68492060de718a00c917abb4_Nominees-p-130x130q80.jpg",
+      "format": "jpg",
+      "width": null,
+      "height": null,
+      "quality": null,
+      "error": null
+    }
+  ],
+  "altText": null
+}

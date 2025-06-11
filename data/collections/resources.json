@@ -1,0 +1,127 @@
+{
+  "id": "68492060de718a00c917abbd",
+  "displayName": "Resources",
+  "singularName": "Resource",
+  "slug": "resources",
+  "createdOn": "2024-01-26T03:02:44.160Z",
+  "lastUpdated": "2025-06-11T06:21:38.418Z",
+  "fields": [
+    {
+      "id": "4d834cfc1017a777f113106e8bd2c93c",
+      "isEditable": true,
+      "isRequired": false,
+      "type": "Number",
+      "slug": "order",
+      "displayName": "Order",
+      "helpText": "Lowest number shows first",
+      "validations": {
+        "format": "integer",
+        "precision": 1,
+        "allowNegative": false
+      }
+    },
+    {
+      "id": "c8e22c2353abea38d941a3c46bb0c7f1",
+      "isEditable": true,
+      "isRequired": false,
+      "type": "DateTime",
+      "slug": "date-of-item-s-release",
+      "displayName": "Date of item's release",
+      "helpText": null,
+      "validations": null
+    },
+    {
+      "id": "e67a8b85e6381bae1f60762180cc5bd5",
+      "isEditable": true,
+      "isRequired": false,
+      "type": "Option",
+      "slug": "type-of-item",
+      "displayName": "Type Of Item",
+      "helpText": "To display on the homepage, use \"Important Materials\"",
+      "validations": {
+        "options": [
+          {
+            "name": "Press Releases",
+            "id": "1f802a4b50b0fbe9a00c5a8fd32776fa"
+          },
+          {
+            "name": "Media Coverage",
+            "id": "e2494c9135dda3bd8fddf682abe89bfa"
+          },
+          {
+            "name": "Important Filings",
+            "id": "aab44d108a1b3556b0e5a23089b011fe"
+          },
+          {
+            "name": "Important Materials",
+            "id": "e2975900e6f6f35a1e66ddd68dd4a95a"
+          },
+          {
+            "name": "Presentations",
+            "id": "e082435ef423cc8fad95cd8d54b0ebd3"
+          }
+        ]
+      }
+    },
+    {
+      "id": "d459e840394c20f36b8821c07ba238d3",
+      "isEditable": true,
+      "isRequired": false,
+      "type": "Link",
+      "slug": "news-or-material-link",
+      "displayName": "Link to resource",
+      "helpText": "If you are uploading a file, to be downloaded, skip this and use the \"Downloadable Material File\" option below, and be sure to select \"Downloadable File(s)\" from the Type Of Item above",
+      "validations": null
+    },
+    {
+      "id": "3b307b67b65931ce4763a351282ffff0",
+      "isEditable": true,
+      "isRequired": false,
+      "type": "File",
+      "slug": "downloadable-material-file",
+      "displayName": "Downloadable resource",
+      "helpText": null,
+      "validations": null
+    },
+    {
+      "id": "7bbdb326b01a597ff7c3da0377e05e28",
+      "isEditable": true,
+      "isRequired": false,
+      "type": "PlainText",
+      "slug": "source-name",
+      "displayName": "Source name",
+      "helpText": null,
+      "validations": {
+        "singleLine": true
+      }
+    },
+    {
+      "id": "b43cfb7be6763d831ea20591b4b51f3a",
+      "isEditable": true,
+      "isRequired": true,
+      "type": "PlainText",
+      "slug": "name",
+      "displayName": "Name",
+      "helpText": null,
+      "validations": {
+        "maxLength": 256
+      }
+    },
+    {
+      "id": "1287d3870332d8aaa563e9e0363d4e98",
+      "isEditable": true,
+      "isRequired": true,
+      "type": "PlainText",
+      "slug": "slug",
+      "displayName": "Slug",
+      "helpText": null,
+      "validations": {
+        "maxLength": 256,
+        "messages": {
+          "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+          "maxLength": "Must be less than 256 characters"
+        }
+      }
+    }
+  ]
+}

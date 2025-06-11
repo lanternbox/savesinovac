@@ -1,0 +1,91 @@
+{
+  "templatePages": [
+    {
+      "id": "68492060de718a00c917aae6",
+      "siteId": "68492060de718a00c917aad2",
+      "parentId": null,
+      "collectionId": "68492060de718a00c917abbd",
+      "title": "Resources Template",
+      "slug": "detail_resources",
+      "createdOn": "2024-01-26T03:02:44.358Z",
+      "lastUpdated": "2025-06-11T06:21:24.858Z",
+      "archived": false,
+      "draft": false,
+      "canBranch": true,
+      "isBranch": false,
+      "seo": {
+        "title": null,
+        "description": null
+      },
+      "openGraph": {
+        "title": null,
+        "titleCopied": false,
+        "description": null,
+        "descriptionCopied": false
+      },
+      "publishedPath": "/resources",
+      "localeId": null
+    },
+    {
+      "id": "68492060de718a00c917aade",
+      "siteId": "68492060de718a00c917aad2",
+      "parentId": null,
+      "collectionId": "68492060de718a00c917ab34",
+      "title": "Homepage Blocks Template",
+      "slug": "detail_homepage-blocks",
+      "createdOn": "2024-01-25T14:20:35.144Z",
+      "lastUpdated": "2025-06-11T06:21:24.799Z",
+      "archived": false,
+      "draft": false,
+      "canBranch": true,
+      "isBranch": false,
+      "seo": {
+        "title": null,
+        "description": null
+      },
+      "openGraph": {
+        "title": null,
+        "titleCopied": false,
+        "description": null,
+        "descriptionCopied": false
+      },
+      "publishedPath": "/homepage-blocks",
+      "localeId": null
+    }
+  ],
+  "staticPages": [
+    {
+      "id": "68492060de718a00c917aad1",
+      "siteId": "68492060de718a00c917aad2",
+      "parentId": null,
+      "collectionId": null,
+      "title": "Home",
+      "slug": null,
+      "createdOn": "2025-06-10T19:47:14.229Z",
+      "lastUpdated": "2025-06-11T09:17:29.316Z",
+      "archived": false,
+      "draft": false,
+      "canBranch": true,
+      "isBranch": false,
+      "seo": {
+        "title": "Save Sinovac - Home",
+        "description": "Sinovac’s long-term value is under serious threat from the current Board of Directors whose members who have repeatedly sought to hijack corporate control and disrupt operations – destroying shareholder value in the process."
+      },
+      "openGraph": {
+        "title": null,
+        "titleCopied": false,
+        "description": "Navbar, HomeHeader, HomeIntro, HomeBlocksDs, HomeResourcesDs, Footer",
+        "descriptionCopied": false
+      },
+      "publishedPath": "/",
+      "localeId": null
+    }
+  ],
+  "pagination": {
+    "limit": 100,
+    "offset": 0,
+    "total": 3,
+    "templatePagesCount": 2,
+    "staticPagesCount": 1
+  }
+}

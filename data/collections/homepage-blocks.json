@@ -1,0 +1,153 @@
+{
+  "id": "68492060de718a00c917ab34",
+  "displayName": "Homepage Blocks",
+  "singularName": "Homepage Block",
+  "slug": "homepage-blocks",
+  "createdOn": "2024-01-25T14:20:34.761Z",
+  "lastUpdated": "2025-06-11T06:21:38.232Z",
+  "fields": [
+    {
+      "id": "f07b1bdf753bb637042ba0c11c516ab7",
+      "isEditable": true,
+      "isRequired": false,
+      "type": "Number",
+      "slug": "order",
+      "displayName": "Order",
+      "helpText": "Smaller numbers display first / top left",
+      "validations": {
+        "format": "integer",
+        "precision": 1,
+        "allowNegative": false
+      }
+    },
+    {
+      "id": "d73b2151f34472b393290ee6bf58f25b",
+      "isEditable": true,
+      "isRequired": false,
+      "type": "Option",
+      "slug": "show-checkbox-or-red-x",
+      "displayName": "Show Checkbox or Red X?",
+      "helpText": "Green Checkbox",
+      "validations": {
+        "options": [
+          {
+            "name": "Red X",
+            "id": "9e0aa6c5c1ada162c3b9785d6a2e629a"
+          },
+          {
+            "name": "Green Checkbox",
+            "id": "affeeb194fd3cd11f1f408365149abd8"
+          }
+        ]
+      }
+    },
+    {
+      "id": "3bf207c5e269f21519e9947247beb5bf",
+      "isEditable": true,
+      "isRequired": false,
+      "type": "Image",
+      "slug": "icon-logo",
+      "displayName": "Icon / Logo",
+      "helpText": "transparent PNG file, black on transparent (site will auto invert icon to white)",
+      "validations": null
+    },
+    {
+      "id": "5fdfa5ac3c55966aebd2d3385e8024bc",
+      "isEditable": true,
+      "isRequired": false,
+      "type": "Switch",
+      "slug": "invert-icon",
+      "displayName": "Invert Icon?",
+      "helpText": null,
+      "validations": null
+    },
+    {
+      "id": "e24292064d6d95145de4c0f9af799b75",
+      "isEditable": true,
+      "isRequired": false,
+      "type": "RichText",
+      "slug": "block-copy",
+      "displayName": "Block Copy",
+      "helpText": null,
+      "validations": null
+    },
+    {
+      "id": "4b7ea35984cd75c37f8c7b3f609f06ca",
+      "isEditable": true,
+      "isRequired": false,
+      "type": "Link",
+      "slug": "link",
+      "displayName": "Link",
+      "helpText": "If this is filled in, block will render as a link block, not a normal block",
+      "validations": null
+    },
+    {
+      "id": "ccacfe4308127a07363e2a3bd08b82ad",
+      "isEditable": true,
+      "isRequired": false,
+      "type": "Color",
+      "slug": "background-color",
+      "displayName": "Background color",
+      "helpText": null,
+      "validations": null
+    },
+    {
+      "id": "87e82acae3715a03f848caa5781709bb",
+      "isEditable": true,
+      "isRequired": false,
+      "type": "Color",
+      "slug": "text-color",
+      "displayName": "Text color",
+      "helpText": null,
+      "validations": null
+    },
+    {
+      "id": "7d25a167fe47a9c16bc054edf4121cca",
+      "isEditable": true,
+      "isRequired": false,
+      "type": "Color",
+      "slug": "border-color",
+      "displayName": "Border color",
+      "helpText": null,
+      "validations": null
+    },
+    {
+      "id": "2f6a5bad70376b2a4d78e910834b8514",
+      "isEditable": true,
+      "isRequired": false,
+      "type": "Image",
+      "slug": "background-image",
+      "displayName": "Background Image",
+      "helpText": null,
+      "validations": null
+    },
+    {
+      "id": "239d491ed55a7e389751112ddd1c79ce",
+      "isEditable": true,
+      "isRequired": true,
+      "type": "PlainText",
+      "slug": "name",
+      "displayName": "Headline",
+      "helpText": "Main headline for the block",
+      "validations": {
+        "maxLength": 256
+      }
+    },
+    {
+      "id": "63c45cf3c3f38d1d4f38dd4b338655ff",
+      "isEditable": true,
+      "isRequired": true,
+      "type": "PlainText",
+      "slug": "slug",
+      "displayName": "Slug",
+      "helpText": null,
+      "validations": {
+        "maxLength": 256,
+        "messages": {
+          "pattern": "Must be alphanumerical and not contain any spaces or special characters",
+          "maxLength": "Must be less than 256 characters"
+        }
+      }
+    }
+  ]
+}

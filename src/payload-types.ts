@@ -733,6 +733,15 @@ export interface Navbar {
  */
 export interface Footer {
   id: number;
+  heading?: string | null;
+  logo?: (number | null) | Media;
+  links?:
+    | {
+        text?: string | null;
+        href?: string | null;
+        id?: string | null;
+      }[]
+    | null;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -751,6 +760,15 @@ export interface NavbarSelect<T extends boolean = true> {
  * via the `definition` "Footer_select".
  */
 export interface FooterSelect<T extends boolean = true> {
+  heading?: T;
+  logo?: T;
+  links?:
+    | T
+    | {
+        text?: T;
+        href?: T;
+        id?: T;
+      };
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

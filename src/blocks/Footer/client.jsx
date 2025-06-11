@@ -13,7 +13,7 @@ export function Client({ block }) {
   _interactions.useInteractions(_interactionsData, _styles);
   return (
     <div className={cx("contact-items")}>
-      <div className={cx("section", "section-subfooter")}>
+      {/* <div className={cx("section", "section-subfooter")}>
         <div className={cx("container-large")}>
           <div className={cx("home-flex-spacing-centered")}>
             <h3 className={cx("footer-h3")}>{block?.heading}</h3>
@@ -111,70 +111,41 @@ export function Client({ block }) {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <section className={cx("section", "footer")}>
         <div className={cx("container-large")}>
           <div className={cx("footer-nav")}>
             <_Builtin.Link
               className={cx("footer-logo-link-wrap")}
               options={{
-                href: block?.link?.href,
+                href: "/",
               }}
             >
-              {block?.link?.text}
+              <_Builtin.Image
+                className={cx("footer-logo")}
+                width="auto"
+                height="auto"
+                loading="lazy"
+                image={block?.logo}
+              />
             </_Builtin.Link>
-            <div
+            {/* <div
               className={cx("footer-nav-column", "wide")}
               id={cx("w-node-dcab04af-199a-c1c5-8338-07c0247120f1-eea1125b")}
             >
-              <_Builtin.Link
-                className={cx("btn-footer_nav")}
-                options={{
-                  href: block?.["link-2"]?.href,
-                }}
-              >
-                {block?.["link-2"]?.text}
-              </_Builtin.Link>
-              <_Builtin.Link
-                className={cx("btn-footer_nav")}
-                options={{
-                  href: block?.["link-3"]?.href,
-                }}
-              >
-                {block?.["link-3"]?.text}
-              </_Builtin.Link>
-              <_Builtin.Link
-                className={cx("btn-footer_nav")}
-                options={{
-                  href: block?.["link-4"]?.href,
-                }}
-              >
-                {block?.["link-4"]?.text}
-              </_Builtin.Link>
-            </div>
+              {block?.links?.map((link, index) => (
+                <_Builtin.Link
+                  key={index}
+                  className={cx("btn-footer_nav")}
+                  options={{
+                    href: link?.href,
+                  }}
+                >
+                  {link?.text}
+                </_Builtin.Link>
+              ))}
+            </div> */}
           </div>
-          <div className={cx("button-group", "flex-jcenter", "pt-3", "hidden")}>
-            <_Builtin.Link
-              className={cx("button-2")}
-              options={{
-                href: block?.["link-5"]?.href,
-              }}
-            >
-              {block?.["link-5"]?.text}
-            </_Builtin.Link>
-            <_Builtin.Link
-              className={cx("button-2")}
-              options={{
-                href: block?.["link-6"]?.href,
-              }}
-            >
-              {block?.["link-6"]?.text}
-            </_Builtin.Link>
-          </div>
-          <_Builtin.HtmlEmbed
-            className={cx("hidden")}
-            value="%3Cstyle%3E%0A%40media%20screen%20and%20(max-width%3A%20767px)%20%7B%0A%20%20.footer-logo-link-wrap%20%7B%0A%20%20%20%20width%3A%20100%25%20!important%3B%0A%20%20%7D%0A%7D%0A%3C%2Fstyle%3E"
-          />
         </div>
       </section>
     </div>

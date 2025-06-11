@@ -8,6 +8,7 @@ import "@/devlink/global.css";
 import { DevLinkProvider } from "@/devlink/DevLinkProvider";
 import { LinkRenderer, ImageRenderer } from "@/renderers";
 import { Navbar } from "@/blocks/Navbar";
+import { Footer } from "@/blocks/Footer";
 // end imports to uncomment
 
 export default async function RootLayout({
@@ -52,7 +53,8 @@ export default async function RootLayout({
       <body>
         <DevLinkProvider renderLink={LinkRenderer} renderImage={ImageRenderer}>
           <Navbar locale={locale} />
-          <div className="loaded-wrap">{children}</div>
+          {/* <div className="loaded-wrap">{children}</div> */}
+          <Footer locale={locale} />
         </DevLinkProvider>
       </body>
     </html>

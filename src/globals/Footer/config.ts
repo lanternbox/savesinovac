@@ -10,5 +10,29 @@ export const Footer: GlobalConfig = {
   hooks: {
     afterChange: [afterChangePostToWebhookGlobal],
   },
-  fields: [],
+  fields: [
+    {
+      name: "heading",
+      type: "text",
+    },
+    {
+      name: "logo",
+      type: "upload",
+      relationTo: "media",
+    },
+    {
+      name: "links",
+      type: "array",
+      fields: [
+        {
+          name: "text",
+          type: "text",
+        },
+        {
+          name: "href",
+          type: "text",
+        },
+      ],
+    },
+  ],
 };

@@ -1,5 +1,5 @@
 // import "@/styles/fonts.css";
-// import "@/devlink/global.css";
+import "@/devlink/global.css";
 // import "@/styles/relumeGlobalStyles.css";
 // import "@/styles/styleGuide.css";
 // import "@/styles/tailwindShadcn.scss";
@@ -57,7 +57,7 @@ export default async function RootLayout({
       <body>
         <DevLinkProvider renderLink={LinkRenderer} renderImage={ImageRenderer}>
           <Navbar locale={locale} />
-          {/* <div className="loaded-wrap">{children}</div> */}
+          <div className="loaded-wrap">{children}</div>
           <Footer locale={locale} />
         </DevLinkProvider>
       </body>

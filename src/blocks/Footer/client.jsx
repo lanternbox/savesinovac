@@ -12,7 +12,7 @@ const cx = (...args) => _utils.cx(_styles, ...args);
 export function Client({ block }) {
   _interactions.useInteractions(_interactionsData, _styles);
   return (
-    <div className={cx("contact-items")}>
+    <>
       {/* <div className={cx("section", "section-subfooter")}>
         <div className={cx("container-large")}>
           <div className={cx("home-flex-spacing-centered")}>
@@ -148,6 +148,6 @@ export function Client({ block }) {
           </div>
         </div>
       </section>
-    </div>
+    </>
   );
 }

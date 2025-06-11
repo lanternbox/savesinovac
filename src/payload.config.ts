@@ -41,6 +41,8 @@ import { Resources } from "./collections/Resources";
 // end added collection imports
 
 // added global imports
+import { Navbar } from "./globals/Navbar/config";
+import { Footer } from "./globals/Footer/config";
 
 // end added global imports
 
@@ -103,6 +105,8 @@ export default buildConfig({
   ],
   globals: [
     // added globals
+    Navbar,
+    Footer,
     // end added globals
   ],
   // cors: [process.env.PAYLOAD_PUBLIC_SERVER_URL || ""].filter(Boolean),

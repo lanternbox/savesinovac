@@ -90,8 +90,14 @@ export interface Config {
   db: {
     defaultIDType: number;
   };
-  globals: {};
-  globalsSelect: {};
+  globals: {
+    Navbar: Navbar;
+    Footer: Footer;
+  };
+  globalsSelect: {
+    Navbar: NavbarSelect<false> | NavbarSelect<true>;
+    Footer: FooterSelect<false> | FooterSelect<true>;
+  };
   locale: 'zh';
   user: User & {
     collection: 'users';
@@ -143,48 +149,6 @@ export interface Page {
   fullTitle?: string | null;
   content?:
     | (
-        | {
-            heading?: string | null;
-            paragraph?: string | null;
-            link?: {
-              href?: string | null;
-              text?: string | null;
-            };
-            'paragraph-2'?: string | null;
-            'link-2'?: {
-              href?: string | null;
-              text?: string | null;
-            };
-            'paragraph-3'?: string | null;
-            'link-3'?: {
-              href?: string | null;
-              text?: string | null;
-            };
-            image?: (number | null) | Media;
-            'link-4'?: {
-              href?: string | null;
-              text?: string | null;
-            };
-            'link-5'?: {
-              href?: string | null;
-              text?: string | null;
-            };
-            'link-6'?: {
-              href?: string | null;
-              text?: string | null;
-            };
-            'link-7'?: {
-              href?: string | null;
-              text?: string | null;
-            };
-            'link-8'?: {
-              href?: string | null;
-              text?: string | null;
-            };
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'Footer';
-          }
         | {
             heading?: string | null;
             'heading-2'?: string | null;
@@ -242,26 +206,6 @@ export interface Page {
             id?: string | null;
             blockName?: string | null;
             blockType: 'HomeResourcesDs';
-          }
-        | {
-            image?: (number | null) | Media;
-            link?: {
-              href?: string | null;
-              text?: string | null;
-            };
-            navbarLink?: string | null;
-            'navbarLink-2'?: string | null;
-            'navbarLink-3'?: string | null;
-            'navbarLink-4'?: string | null;
-            'navbarLink-5'?: string | null;
-            'link-2'?: {
-              href?: string | null;
-              text?: string | null;
-            };
-            'image-2'?: (number | null) | Media;
-            id?: string | null;
-            blockName?: string | null;
-            blockType: 'Navbar';
           }
       )[]
     | null;
@@ -531,65 +475,6 @@ export interface PagesSelect<T extends boolean = true> {
   content?:
     | T
     | {
-        Footer?:
-          | T
-          | {
-              heading?: T;
-              paragraph?: T;
-              link?:
-                | T
-                | {
-                    href?: T;
-                    text?: T;
-                  };
-              'paragraph-2'?: T;
-              'link-2'?:
-                | T
-                | {
-                    href?: T;
-                    text?: T;
-                  };
-              'paragraph-3'?: T;
-              'link-3'?:
-                | T
-                | {
-                    href?: T;
-                    text?: T;
-                  };
-              image?: T;
-              'link-4'?:
-                | T
-                | {
-                    href?: T;
-                    text?: T;
-                  };
-              'link-5'?:
-                | T
-                | {
-                    href?: T;
-                    text?: T;
-                  };
-              'link-6'?:
-                | T
-                | {
-                    href?: T;
-                    text?: T;
-                  };
-              'link-7'?:
-                | T
-                | {
-                    href?: T;
-                    text?: T;
-                  };
-              'link-8'?:
-                | T
-                | {
-                    href?: T;
-                    text?: T;
-                  };
-              id?: T;
-              blockName?: T;
-            };
         HomeBlocksDs?:
           | T
           | {
@@ -639,31 +524,6 @@ export interface PagesSelect<T extends boolean = true> {
           | T
           | {
               heading?: T;
-              id?: T;
-              blockName?: T;
-            };
-        Navbar?:
-          | T
-          | {
-              image?: T;
-              link?:
-                | T
-                | {
-                    href?: T;
-                    text?: T;
-                  };
-              navbarLink?: T;
-              'navbarLink-2'?: T;
-              'navbarLink-3'?: T;
-              'navbarLink-4'?: T;
-              'navbarLink-5'?: T;
-              'link-2'?:
-                | T
-                | {
-                    href?: T;
-                    text?: T;
-                  };
-              'image-2'?: T;
               id?: T;
               blockName?: T;
             };
@@ -856,6 +716,42 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
   batch?: T;
   updatedAt?: T;
   createdAt?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Navbar".
+ */
+export interface Navbar {
+  id: number;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Footer".
+ */
+export interface Footer {
+  id: number;
+  updatedAt?: string | null;
+  createdAt?: string | null;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Navbar_select".
+ */
+export interface NavbarSelect<T extends boolean = true> {
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
+}
+/**
+ * This interface was referenced by `Config`'s JSON-Schema
+ * via the `definition` "Footer_select".
+ */
+export interface FooterSelect<T extends boolean = true> {
+  updatedAt?: T;
+  createdAt?: T;
+  globalType?: T;
 }
 /**
  * This interface was referenced by `Config`'s JSON-Schema

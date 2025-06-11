@@ -10,5 +10,11 @@ export const Navbar: GlobalConfig = {
   hooks: {
     afterChange: [afterChangePostToWebhookGlobal],
   },
-  fields: [],
+  fields: [
+    {
+      name: "logo",
+      type: "upload",
+      relationTo: "media",
+    },
+  ],
 };

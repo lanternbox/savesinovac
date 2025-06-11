@@ -4,158 +4,75 @@ import React from "react";
 import * as _Builtin from "@/devlink/_Builtin";
 import * as _utils from "@/devlink/utils";
 import _styles from "./HomeResourcesDs.module.css";
-import { formatDate } from "@/utils/formatDate";
-import { processFieldContent } from "@/utils/processFieldContent";
-export function Client({
-  as: _Component = _Builtin.Section,
-  block,
-  locale,
-  items,
-}) {
-  const content = block;
+
+const cx = (...args) => _utils.cx(_styles, ...args);
+
+export function Client({ block, items }) {
   return (
-    <_Component
-      className={_utils.cx(_styles, "section", "homepage-resources")}
-      grid={{
-        type: "section",
-      }}
-      tag="section"
-    >
-      <_Builtin.BlockContainer
-        className={_utils.cx(_styles, "container-large")}
-        grid={{
-          type: "container",
-        }}
-        tag="div"
-      >
-        <_Builtin.Block
-          className={_utils.cx(_styles, "important-material-box-home")}
-          tag="div"
-        >
-          <_Builtin.Heading
-            className={_utils.cx(_styles, "text-align-center", "mb-3")}
-            tag="h2"
-          >
-            {content?.["heading"]}
-          </_Builtin.Heading>
-          <_Builtin.Block className={_utils.cx(_styles, "resources")} tag="div">
-            <_Builtin.Block
-              className={_utils.cx(_styles, "resource-wrapper")}
-              tag="div"
-            >
+    <section className={cx("section", "homepage-resources")}>
+      <div className={cx("container-large")}>
+        <div className={cx("important-material-box-home")}>
+          <h2 className={cx("text-align-center", "mb-3")}>{block?.heading}</h2>
+          <div className={cx("resources")}>
+            <div className={cx("resource-wrapper")}>
               {items.docs.map((item, index) => (
                 <React.Fragment key={item.id || index}>
-                  <>
-                    <_Builtin.Block
-                      className={_utils.cx(_styles, "press-item")}
-                      tag="div"
-                      fieldname="resources"
-                      sort=""
-                      id="dynamic-item"
-                    >
-                      <_Builtin.Block
-                        className={_utils.cx(_styles, "resource-item")}
-                        tag="div"
-                      >
-                        <_Builtin.Block
-                          className={_utils.cx(_styles, "resource-item-left")}
-                          tag="div"
-                        >
-                          <_Builtin.Block
-                            className={_utils.cx(_styles, "resoure-image-icon")}
-                            tag="div"
-                          >
-                            <_Builtin.Link
-                              button={false}
-                              block="inline"
-                              options={{
-                                href: `/collection/${item["slug"]}`,
-                              }}
-                            >
-                              <_Builtin.Image
-                                className={_utils.cx(
-                                  _styles,
-                                  "resource-icon",
-                                  "invert",
-                                )}
-                                width="auto"
-                                height="auto"
-                                loading="lazy"
-                                alt="Press Releases"
-                                src="https://cdn.prod.website-files.com/68492060de718a00c917aad2/68492060de718a00c917ab86_press.png"
-                              />
-                            </_Builtin.Link>
-                          </_Builtin.Block>
-                        </_Builtin.Block>
-                        <_Builtin.Block
-                          className={_utils.cx(_styles, "resource-item-right")}
-                          tag="div"
-                        >
+                  <div className={cx("press-item")} id="dynamic-item">
+                    <div className={cx("resource-item")}>
+                      <div className={cx("resource-item-left")}>
+                        <div className={cx("resoure-image-icon")}>
                           <_Builtin.Link
-                            className={_utils.cx(_styles, "resource-link")}
-                            button={false}
-                            block="inline"
                             options={{
-                              href: `/collection/${item["slug"]}`,
+                              href: `/collection/${item?.slug}`,
                             }}
                           >
-                            <_Builtin.Heading
-                              className={_utils.cx(_styles, "resource-heading")}
-                              tag="h6"
-                            >
-                              {processFieldContent("name", item, locale)}
-                            </_Builtin.Heading>
+                            <_Builtin.Image
+                              className={cx("resource-icon", "invert")}
+                              width="auto"
+                              height="auto"
+                              loading="lazy"
+                              alt="Press Releases"
+                              image={{
+                                src: "https://cdn.prod.website-files.com/68492060de718a00c917aad2/68492060de718a00c917ab86_press.png",
+                              }}
+                            />
                           </_Builtin.Link>
-                          <_Builtin.Block
-                            className={_utils.cx(_styles, "flex-resources")}
-                            tag="div"
-                          >
-                            <_Builtin.Block
-                              className={_utils.cx(_styles, "resource-details")}
-                              tag="div"
-                            >
-                              {processFieldContent("date", item, locale)}
-                            </_Builtin.Block>
-                            <_Builtin.Block
-                              className={_utils.cx(_styles, "resource-details")}
-                              tag="div"
-                            >
-                              {processFieldContent("/ ", item, locale)}
-                            </_Builtin.Block>
-                            <_Builtin.Block
-                              className={_utils.cx(_styles, "resource-details")}
-                              tag="div"
-                            >
-                              {processFieldContent("source", item, locale)}
-                            </_Builtin.Block>
-                          </_Builtin.Block>
-                          <_Builtin.Block
-                            className={_utils.cx(
-                              _styles,
-                              "resource-flex",
-                              "pt-1",
-                              "hidden",
-                            )}
-                            tag="div"
-                          >
-                            <_Builtin.Block tag="div">
-                              {processFieldContent(
-                                "This is some text inside of a div block.",
-                                item,
-                                locale,
-                              )}
-                            </_Builtin.Block>
-                          </_Builtin.Block>
-                        </_Builtin.Block>
-                      </_Builtin.Block>
-                    </_Builtin.Block>
-                  </>
+                        </div>
+                      </div>
+                      <div className={cx("resource-item-right")}>
+                        <_Builtin.Link
+                          className={cx("resource-link")}
+                          options={{
+                            href: `/collection/${item?.slug}`,
+                          }}
+                        >
+                          <h6 className={cx("resource-heading")}>
+                            {item?.name}
+                          </h6>
+                        </_Builtin.Link>
+                        <div className={cx("flex-resources")}>
+                          <div className={cx("resource-details")}>
+                            {item?.date}
+                          </div>
+                          <div className={cx("resource-details")}>{"/ "}</div>
+                          <div className={cx("resource-details")}>
+                            {item?.source}
+                          </div>
+                        </div>
+                        <div className={cx("resource-flex", "pt-1", "hidden")}>
+                          <div>
+                            {"This is some text inside of a div block."}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </React.Fragment>
               ))}
-            </_Builtin.Block>
-          </_Builtin.Block>
-        </_Builtin.Block>
-      </_Builtin.BlockContainer>
-    </_Component>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

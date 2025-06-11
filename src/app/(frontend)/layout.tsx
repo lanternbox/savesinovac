@@ -7,9 +7,7 @@ import "./relumeGlobalStyles.css";
 import "@/devlink/global.css";
 import { DevLinkProvider } from "@/devlink/DevLinkProvider";
 import { LinkRenderer, ImageRenderer } from "@/renderers";
-// import { NavbarG } from "@/blocks/NavbarG";
-// import { NavbarG } from "../../../data/devlink/NavbarG";
-// import { NavbarMobileG } from "@/blocks/NavbarMobileG";
+import { Navbar } from "@/blocks/Navbar";
 // end imports to uncomment
 
 export default async function RootLayout({
@@ -21,8 +19,6 @@ export default async function RootLayout({
 }) {
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
   const { locale } = await params;
-
-  return <div>Hello</div>;
 
   return (
     <html lang="zh" suppressHydrationWarning>
@@ -55,8 +51,7 @@ export default async function RootLayout({
       </head>
       <body>
         <DevLinkProvider renderLink={LinkRenderer} renderImage={ImageRenderer}>
-          {/* <NavbarG locale={locale} /> */}
-          {/* <NavbarMobileG locale={locale} /> */}
+          <Navbar locale={locale} />
           <div className="loaded-wrap">{children}</div>
         </DevLinkProvider>
       </body>

@@ -6,280 +6,153 @@ import * as _Builtin from "@/devlink/_Builtin";
 import * as _interactions from "@/devlink/interactions";
 import * as _utils from "@/devlink/utils";
 import _styles from "./HomeBlocksDs.module.css";
-import { formatDate } from "@/utils/formatDate";
-import { processFieldContent } from "@/utils/processFieldContent";
-export function Client({
-  as: _Component = _Builtin.Section,
-  block,
-  locale,
-  items,
-}) {
-  const content = block;
+
+const cx = (...args) => _utils.cx(_styles, ...args);
+
+export function Client({ block, items }) {
   _interactions.useInteractions(_interactionsData, _styles);
   return (
-    <_Component
-      className={_utils.cx(_styles, "section")}
-      grid={{
-        type: "section",
-      }}
-      tag="section"
-    >
-      <_Builtin.BlockContainer
-        className={_utils.cx(_styles, "container-large")}
-        grid={{
-          type: "container",
-        }}
-        tag="div"
-      >
-        <_Builtin.Block
-          className={_utils.cx(_styles, "home-flex-spacing-centered")}
-          tag="div"
-        >
-          <_Builtin.Block
-            className={_utils.cx(_styles, "subhero-max-width")}
-            tag="div"
-          >
-            <_Builtin.Heading
-              className={_utils.cx(_styles, "home-h2", "big")}
-              tag="h2"
-            >
-              {content?.["heading"]}
-            </_Builtin.Heading>
-            <_Builtin.Heading
-              className={_utils.cx(_styles, "home-h3")}
-              tag="h3"
-            >
-              {content?.["heading-2"]}
-            </_Builtin.Heading>
-          </_Builtin.Block>
-          <_Builtin.Block
-            className={_utils.cx(_styles, "_2-up-grid", "home-blocks")}
-            tag="div"
-          >
+    <section className={cx("section")}>
+      <div className={cx("container-large")}>
+        <div className={cx("home-flex-spacing-centered")}>
+          <div className={cx("subhero-max-width")}>
+            <h2 className={cx("home-h2", "big")}>{block?.heading}</h2>
+            <h3 className={cx("home-h3")}>{block?.["heading-2"]}</h3>
+          </div>
+          <div className={cx("_2-up-grid", "home-blocks")}>
             {items.docs.map((item, index) => (
               <React.Fragment key={item.id || index}>
-                <>
-                  <_Builtin.Block
-                    className={_utils.cx(
-                      _styles,
-                      "homepage-blocks",
-                      "w-node-_835164b7-0fa1-563c-5b91-f32da4ef5e5f-a4ef5e55",
-                    )}
-                    id={_utils.cx(_styles, "dynamic-item")}
-                    tag="div"
-                    fieldname="homepage-blocks"
-                    sort="order"
-                  >
-                    <_Builtin.Block
-                      className={_utils.cx(_styles, "card-colored")}
-                      tag="div"
-                    >
-                      <_Builtin.Image
-                        className={_utils.cx(_styles, "earmark")}
-                        width="auto"
-                        height="auto"
-                        loading="lazy"
-                        alt=""
-                        src="https://cdn.prod.website-files.com/68492060de718a00c917aad2/68492060de718a00c917ab30_accept.png"
-                      />
-                      <_Builtin.Block
-                        className={_utils.cx(_styles, "card-inner-flex")}
+                <div
+                  className={cx(
+                    "homepage-blocks",
+                    "w-node-_835164b7-0fa1-563c-5b91-f32da4ef5e5f-a4ef5e55",
+                  )}
+                  id={cx("dynamic-item")}
+                >
+                  <div className={cx("card-colored")}>
+                    <_Builtin.Image
+                      className={cx("earmark")}
+                      width="auto"
+                      height="auto"
+                      loading="lazy"
+                      alt=""
+                      image={{
+                        src: "https://cdn.prod.website-files.com/68492060de718a00c917aad2/68492060de718a00c917ab30_accept.png",
+                      }}
+                    />
+                    <div className={cx("card-inner-flex")}>
+                      <h3 className={cx("card-color-heading-h3")}>
+                        {item?.Headline}
+                      </h3>
+                      <div className={cx("dividing-line")} />
+                      <_Builtin.RichText
+                        className={cx("card-color-paragraph")}
                         tag="div"
                       >
-                        <_Builtin.Heading
-                          className={_utils.cx(
-                            _styles,
-                            "card-color-heading-h3",
+                        {item?.["Block Copy"]}
+                      </_Builtin.RichText>
+                    </div>
+                    <div className={cx("card-button-wrapper")}>
+                      <_Builtin.Link
+                        className={cx("btn-with-icon")}
+                        data-w-id="835164b7-0fa1-563c-5b91-f32da4ef5e69"
+                        options={{
+                          href: `/collection/${item?.slug}`,
+                        }}
+                      >
+                        <div
+                          className={cx(
+                            "flex-align-justify-center",
+                            "button-with-icon",
                           )}
-                          tag="h3"
                         >
-                          {processFieldContent("Headline", item, locale)}
-                        </_Builtin.Heading>
-                        <_Builtin.Block
-                          className={_utils.cx(_styles, "dividing-line")}
-                          tag="div"
-                        />
-                        <_Builtin.RichText
-                          className={_utils.cx(_styles, "card-color-paragraph")}
-                          tag="div"
-                          slot=""
-                        >
-                          {processFieldContent("Block Copy", item, locale)}
-                        </_Builtin.RichText>
-                      </_Builtin.Block>
-                      <_Builtin.Block
-                        className={_utils.cx(_styles, "card-button-wrapper")}
-                        tag="div"
-                      >
-                        <_Builtin.Link
-                          className={_utils.cx(_styles, "btn-with-icon")}
-                          data-w-id="835164b7-0fa1-563c-5b91-f32da4ef5e69"
-                          button={false}
-                          block="inline"
-                          options={{
-                            href: `/collection/${item["slug"]}`,
-                          }}
-                        >
-                          <_Builtin.Block
-                            className={_utils.cx(
-                              _styles,
-                              "flex-align-justify-center",
-                              "button-with-icon",
-                            )}
-                            tag="div"
-                          >
-                            <_Builtin.Block
-                              className={_utils.cx(_styles, "btn-text")}
-                              tag="div"
-                            >
-                              {processFieldContent("learn more", item, locale)}
-                            </_Builtin.Block>
-                            <_Builtin.Image
-                              className={_utils.cx(
-                                _styles,
-                                "margin-left-10",
-                                "arrow-hero",
-                              )}
-                              loading="lazy"
-                              width="20"
-                              height="20"
-                              alt=""
-                              src="https://cdn.prod.website-files.com/68492060de718a00c917aad2/68492060de718a00c917ab08_arrow-black.png"
-                            />
-                          </_Builtin.Block>
-                        </_Builtin.Link>
-                      </_Builtin.Block>
-                    </_Builtin.Block>
-                  </_Builtin.Block>
-                </>
+                          <div className={cx("btn-text")}>{"learn more"}</div>
+                          <_Builtin.Image
+                            className={cx("margin-left-10", "arrow-hero")}
+                            loading="lazy"
+                            width="20"
+                            height="20"
+                            alt=""
+                            image={{
+                              src: "https://cdn.prod.website-files.com/68492060de718a00c917aad2/68492060de718a00c917ab08_arrow-black.png",
+                            }}
+                          />
+                        </div>
+                      </_Builtin.Link>
+                    </div>
+                  </div>
+                </div>
               </React.Fragment>
             ))}
-          </_Builtin.Block>
-          <_Builtin.Block
-            className={_utils.cx(_styles, "text-align-center")}
-            tag="div"
-          >
-            <_Builtin.Heading
-              className={_utils.cx(_styles, "home-h2")}
-              tag="h2"
+          </div>
+          <div className={cx("text-align-center")}>
+            <h2 className={cx("home-h2")}>{block?.["heading-3"]}</h2>
+          </div>
+          <div className={cx("_2-up-grid", "home-blocks")}>
+            <div
+              className={cx("homepage-blocks")}
+              id={cx("w-node-_835164b7-0fa1-563c-5b91-f32da4ef5e72-a4ef5e55")}
             >
-              {content?.["heading-3"]}
-            </_Builtin.Heading>
-          </_Builtin.Block>
-          <_Builtin.Block
-            className={_utils.cx(_styles, "_2-up-grid", "home-blocks")}
-            tag="div"
-          >
-            <_Builtin.Block
-              className={_utils.cx(_styles, "homepage-blocks")}
-              id={_utils.cx(
-                _styles,
-                "w-node-_835164b7-0fa1-563c-5b91-f32da4ef5e72-a4ef5e55",
-              )}
-              tag="div"
-            >
-              <_Builtin.Block
-                className={_utils.cx(_styles, "card-colored", "red")}
-                tag="div"
-              >
+              <div className={cx("card-colored", "red")}>
                 <_Builtin.Image
-                  className={_utils.cx(_styles, "earmark")}
+                  className={cx("earmark")}
                   width="auto"
                   height="auto"
                   loading="lazy"
                   alt=""
-                  src="https://cdn.prod.website-files.com/68492060de718a00c917aad2/68492060de718a00c917abba_red-x.png"
-                  image={content?.["image"]}
+                  image={block?.image}
                 />
-                <_Builtin.Block
-                  className={_utils.cx(_styles, "card-inner-flex")}
-                  tag="div"
-                >
-                  <_Builtin.Heading
-                    className={_utils.cx(_styles, "card-color-heading-h3")}
-                    tag="h3"
-                  >
-                    {content?.["heading-4"]}
-                  </_Builtin.Heading>
-                  <_Builtin.Block
-                    className={_utils.cx(_styles, "dividing-line", "red")}
-                    tag="div"
-                  />
+                <div className={cx("card-inner-flex")}>
+                  <h3 className={cx("card-color-heading-h3")}>
+                    {block?.["heading-4"]}
+                  </h3>
+                  <div className={cx("dividing-line", "red")} />
                   <_Builtin.RichText
-                    className={_utils.cx(_styles, "card-color-paragraph")}
+                    className={cx("card-color-paragraph")}
                     tag="div"
-                    slot=""
                   >
-                    {processFieldContent("body", content, locale)}
+                    {block?.body}
                   </_Builtin.RichText>
-                </_Builtin.Block>
-                <_Builtin.Block
-                  className={_utils.cx(_styles, "card-button-wrapper")}
-                  tag="div"
-                >
+                </div>
+                <div className={cx("card-button-wrapper")}>
                   <_Builtin.Link
-                    className={_utils.cx(_styles, "btn-with-icon")}
+                    className={cx("btn-with-icon")}
                     data-w-id="835164b7-0fa1-563c-5b91-f32da4ef5e7d"
-                    button={false}
-                    block="inline"
                     options={{
-                      href: content?.["link"]?.href,
+                      href: block?.link?.href,
                     }}
                   >
-                    {content?.["link"]?.text}
+                    {block?.link?.text}
                   </_Builtin.Link>
-                </_Builtin.Block>
-              </_Builtin.Block>
-            </_Builtin.Block>
-          </_Builtin.Block>
-          <_Builtin.Block
-            className={_utils.cx(_styles, "text-align-center")}
-            tag="div"
-          >
-            <_Builtin.Block
-              className={_utils.cx(_styles, "dna-wrap", "new")}
-              tag="div"
-            >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className={cx("text-align-center")}>
+            <div className={cx("dna-wrap", "new")}>
               <_Builtin.Image
-                className={_utils.cx(_styles, "dna-image", "sm", "mb-4")}
+                className={cx("dna-image", "sm", "mb-4")}
                 loading="lazy"
                 width="auto"
                 height="auto"
                 alt=""
-                src="https://cdn.prod.website-files.com/68492060de718a00c917aad2/68492060de718a00c917abbb_heartbeat-orange.png"
-                image={content?.["image-2"]}
+                image={block?.["image-2"]}
               />
-            </_Builtin.Block>
-            <_Builtin.Heading
-              className={_utils.cx(_styles, "home-h2")}
-              tag="h2"
-            >
-              {content?.["heading-5"]}
-            </_Builtin.Heading>
+            </div>
+            <h2 className={cx("home-h2")}>{block?.["heading-5"]}</h2>
             <_Builtin.Link
-              className={_utils.cx(
-                _styles,
-                "btn-with-icon",
-                "larger",
-                "mt-4",
-                "hidden",
-              )}
+              className={cx("btn-with-icon", "larger", "mt-4", "hidden")}
               data-w-id="835164b7-0fa1-563c-5b91-f32da4ef5e87"
-              button={false}
-              dyn={{
-                bind: {},
-              }}
-              block="inline"
               options={{
-                href: content?.["link-2"]?.href,
+                href: block?.["link-2"]?.href,
                 target: "_blank",
               }}
             >
-              {content?.["link-2"]?.text}
+              {block?.["link-2"]?.text}
             </_Builtin.Link>
-          </_Builtin.Block>
-        </_Builtin.Block>
-      </_Builtin.BlockContainer>
-    </_Component>
+          </div>
+        </div>
+      </div>
+    </section>
   );
 }

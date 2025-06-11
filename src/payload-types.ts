@@ -723,6 +723,7 @@ export interface PayloadMigrationsSelect<T extends boolean = true> {
  */
 export interface Navbar {
   id: number;
+  logo?: (number | null) | Media;
   updatedAt?: string | null;
   createdAt?: string | null;
 }
@@ -740,6 +741,7 @@ export interface Footer {
  * via the `definition` "Navbar_select".
  */
 export interface NavbarSelect<T extends boolean = true> {
+  logo?: T;
   updatedAt?: T;
   createdAt?: T;
   globalType?: T;

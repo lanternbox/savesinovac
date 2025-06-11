@@ -9,14 +9,35 @@ export const HomeHeader: Block = {
       localized: true,
     },
     {
-      name: "image",
+      name: "divider",
       type: "upload",
       relationTo: "media",
     },
     {
-      name: "paragraph",
-      type: "text",
+      name: "description",
+      type: "textarea",
       localized: true,
+    },
+    {
+      name: "links",
+      type: "array",
+      fields: [
+        {
+          name: "text",
+          type: "text",
+          localized: true,
+        },
+        {
+          name: "href",
+          type: "text",
+          localized: true,
+        },
+      ],
+    },
+    {
+      name: "image",
+      type: "upload",
+      relationTo: "media",
     },
   ],
 };

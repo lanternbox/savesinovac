@@ -188,8 +188,16 @@ export interface Page {
           }
         | {
             heading?: string | null;
+            divider?: (number | null) | Media;
+            description?: string | null;
+            links?:
+              | {
+                  text?: string | null;
+                  href?: string | null;
+                  id?: string | null;
+                }[]
+              | null;
             image?: (number | null) | Media;
-            paragraph?: string | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'HomeHeader';
@@ -507,8 +515,16 @@ export interface PagesSelect<T extends boolean = true> {
           | T
           | {
               heading?: T;
+              divider?: T;
+              description?: T;
+              links?:
+                | T
+                | {
+                    text?: T;
+                    href?: T;
+                    id?: T;
+                  };
               image?: T;
-              paragraph?: T;
               id?: T;
               blockName?: T;
             };

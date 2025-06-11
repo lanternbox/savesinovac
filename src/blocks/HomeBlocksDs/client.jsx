@@ -17,7 +17,7 @@ export function Client({ block, items }) {
         <div className={cx("home-flex-spacing-centered")}>
           <div className={cx("subhero-max-width")}>
             <h2 className={cx("home-h2", "big")}>{block?.heading}</h2>
-            <h3 className={cx("home-h3")}>{block?.["heading-2"]}</h3>
+            <h3 className={cx("home-h3")}>{block?.excerpt}</h3>
           </div>
           <div className={cx("_2-up-grid", "home-blocks")}>
             {items.docs.map((item, index) => (
@@ -86,70 +86,7 @@ export function Client({ block, items }) {
             ))}
           </div>
           <div className={cx("text-align-center")}>
-            <h2 className={cx("home-h2")}>{block?.["heading-3"]}</h2>
-          </div>
-          <div className={cx("_2-up-grid", "home-blocks")}>
-            <div
-              className={cx("homepage-blocks")}
-              id={cx("w-node-_835164b7-0fa1-563c-5b91-f32da4ef5e72-a4ef5e55")}
-            >
-              <div className={cx("card-colored", "red")}>
-                <_Builtin.Image
-                  className={cx("earmark")}
-                  width="auto"
-                  height="auto"
-                  loading="lazy"
-                  alt=""
-                  image={block?.image}
-                />
-                <div className={cx("card-inner-flex")}>
-                  <h3 className={cx("card-color-heading-h3")}>
-                    {block?.["heading-4"]}
-                  </h3>
-                  <div className={cx("dividing-line", "red")} />
-                  <_Builtin.RichText
-                    className={cx("card-color-paragraph")}
-                    tag="div"
-                  >
-                    {block?.body}
-                  </_Builtin.RichText>
-                </div>
-                <div className={cx("card-button-wrapper")}>
-                  <_Builtin.Link
-                    className={cx("btn-with-icon")}
-                    data-w-id="835164b7-0fa1-563c-5b91-f32da4ef5e7d"
-                    options={{
-                      href: block?.link?.href,
-                    }}
-                  >
-                    {block?.link?.text}
-                  </_Builtin.Link>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className={cx("text-align-center")}>
-            <div className={cx("dna-wrap", "new")}>
-              <_Builtin.Image
-                className={cx("dna-image", "sm", "mb-4")}
-                loading="lazy"
-                width="auto"
-                height="auto"
-                alt=""
-                image={block?.["image-2"]}
-              />
-            </div>
-            <h2 className={cx("home-h2")}>{block?.["heading-5"]}</h2>
-            <_Builtin.Link
-              className={cx("btn-with-icon", "larger", "mt-4", "hidden")}
-              data-w-id="835164b7-0fa1-563c-5b91-f32da4ef5e87"
-              options={{
-                href: block?.["link-2"]?.href,
-                target: "_blank",
-              }}
-            >
-              {block?.["link-2"]?.text}
-            </_Builtin.Link>
+            <h2 className={cx("home-h2")}>{block?.["excerpt-2"]}</h2>
           </div>
         </div>
       </div>

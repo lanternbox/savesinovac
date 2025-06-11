@@ -151,37 +151,8 @@ export interface Page {
     | (
         | {
             heading?: string | null;
-            'heading-2'?: string | null;
-            'heading-3'?: string | null;
-            image?: (number | null) | Media;
-            'heading-4'?: string | null;
-            body?: {
-              root: {
-                type: string;
-                children: {
-                  type: string;
-                  version: number;
-                  [k: string]: unknown;
-                }[];
-                direction: ('ltr' | 'rtl') | null;
-                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
-                indent: number;
-                version: number;
-              };
-              [k: string]: unknown;
-            } | null;
-            link?: {
-              href?: string | null;
-              text?: string | null;
-            };
-            'image-2'?: (number | null) | Media;
-            'image-3'?: (number | null) | Media;
-            'heading-5'?: string | null;
-            'link-2'?: {
-              href?: string | null;
-              text?: string | null;
-            };
-            'image-4'?: (number | null) | Media;
+            excerpt?: string | null;
+            'excerpt-2'?: string | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'HomeBlocksDs';
@@ -516,27 +487,8 @@ export interface PagesSelect<T extends boolean = true> {
           | T
           | {
               heading?: T;
-              'heading-2'?: T;
-              'heading-3'?: T;
-              image?: T;
-              'heading-4'?: T;
-              body?: T;
-              link?:
-                | T
-                | {
-                    href?: T;
-                    text?: T;
-                  };
-              'image-2'?: T;
-              'image-3'?: T;
-              'heading-5'?: T;
-              'link-2'?:
-                | T
-                | {
-                    href?: T;
-                    text?: T;
-                  };
-              'image-4'?: T;
+              excerpt?: T;
+              'excerpt-2'?: T;
               id?: T;
               blockName?: T;
             };

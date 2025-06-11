@@ -1,0 +1,71 @@
+@font-face {
+  font-family: "finalsix";
+  src: url("/fonts/finalsix/400.woff2") format("woff2");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "finalsix";
+  src: url("/fonts/finalsix/500.woff2") format("woff2");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "finalsix";
+  src: url("/fonts/finalsix/600.woff2") format("woff2");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "finalsix";
+  src: url("/fonts/finalsix/700.woff2") format("woff2");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "source-sans";
+  src: url("/fonts/source-sans/400.woff2") format("woff2");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "source-sans";
+  src: url("/fonts/source-sans/600.woff2") format("woff2");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "source-sans";
+  src: url("/fonts/source-sans/700.woff2") format("woff2");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "forma";
+  src: url("/fonts/forma/400.woff2") format("woff2");
+  font-display: auto;
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+}

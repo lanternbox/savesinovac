@@ -1,0 +1,15 @@
+build
+dist
+# media
+node_modules
+.DS_Store
+.env
+.env.local
+.env.production
+.next
+.vercel
+
+# builder
+# data
+
+sqlite.db

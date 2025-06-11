@@ -1,12 +1,16 @@
-import "./fonts.css";
-import "./globals.scss";
-import "./globalsCustom.scss";
-import "./relumeGlobalStyles.css";
+// import "@/styles/fonts.css";
+// import "@/devlink/global.css";
+// import "@/styles/relumeGlobalStyles.css";
+// import "@/styles/styleGuide.css";
+// import "@/styles/tailwindShadcn.scss";
+// import "@/styles/custom.scss";
 
-// imports to uncomment
-import "@/devlink/global.css";
+import Script from "next/script";
+
 import { DevLinkProvider } from "@/devlink/DevLinkProvider";
 import { LinkRenderer, ImageRenderer } from "@/renderers";
+
+// imports to uncomment
 import { Navbar } from "@/blocks/Navbar";
 import { Footer } from "@/blocks/Footer";
 // end imports to uncomment
@@ -19,8 +23,8 @@ export default async function RootLayout({
   params: Promise<{ locale: string }>;
 }) {
   const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
+  const cookiebotId = process.env.NEXT_PUBLIC_COOKIEBOT_ID;
   const { locale } = await params;
-
   return (
     <html lang="zh" suppressHydrationWarning>
       <head>

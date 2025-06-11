@@ -4,31 +4,34 @@ import { getItemData } from "@/utils/getItemData";
 import { redirect } from "next/navigation";
 
 // added block imports
-import { Footer } from "@/blocks/Footer";
-import { HomeBlocksDs } from "@/blocks/HomeBlocksDs";
+
 import { HomeHeader } from "@/blocks/HomeHeader";
 import { HomeIntro } from "@/blocks/HomeIntro";
+import { HomeBlocksDs } from "@/blocks/HomeBlocksDs";
 import { HomeResourcesDs } from "@/blocks/HomeResourcesDs";
-import { Navbar } from "@/blocks/Navbar";
+
 // end added block imports
 
 const blockComponents = {
   // added block component names
-  Footer,
-  HomeBlocksDs,
   HomeHeader,
   HomeIntro,
+  HomeBlocksDs,
   HomeResourcesDs,
-  Navbar,
   // end added block component names
 };
 
 export async function generateStaticParams() {
   const params = await generateParams("pages");
-  return params.map((param) => ({
-    ...param,
-    slug: param.path ? param.path.split("/").filter(Boolean) : [],
-  }));
+  return params.map((param) => {
+    const slugArray =
+      param.slug === "home" ? [] : param.slug.split("/").filter(Boolean);
+
+    return {
+      locale: param.locale,
+      slug: slugArray,
+    };
+  });
 }
 
 export async function generateMetadata({ params }) {

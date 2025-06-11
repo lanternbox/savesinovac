@@ -31,11 +31,6 @@ export async function getItemData(collection, params) {
 
   const item = items.docs[0];
 
-  if (item?.slug !== "regulations") {
-    // temporary
-    notFound();
-  }
-
   if (!item) {
     notFound();
   }

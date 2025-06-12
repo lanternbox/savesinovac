@@ -18,9 +18,10 @@ export const HomeHeader: Block = {
       type: "textarea",
       localized: true,
     },
+    //
     {
-      name: "links",
-      type: "array",
+      name: "link",
+      type: "group",
       fields: [
         {
           name: "text",
@@ -28,9 +29,9 @@ export const HomeHeader: Block = {
           localized: true,
         },
         {
-          name: "href",
-          type: "text",
-          localized: true,
+          name: "file",
+          type: "upload",
+          relationTo: "media",
         },
       ],
     },

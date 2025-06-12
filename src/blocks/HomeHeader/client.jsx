@@ -29,7 +29,7 @@ export function Client({ block }) {
             </p>
           </div>
           <div className={cx("button-group-2-up", "zero-gap-at-mobile")}>
-            {block?.links?.map((link, index) => (
+            {/* {block?.links?.map((link, index) => (
               <_Builtin.Link
                 key={index}
                 className={cx("btn-with-icon", "white")}
@@ -48,7 +48,21 @@ export function Client({ block }) {
                   />
                 </div>
               </_Builtin.Link>
-            ))}
+            ))} */}
+            <_Builtin.Link
+              className={cx("btn-with-icon", "white")}
+              options={{ href: block?.link?.file?.url, target: "_blank" }}
+            >
+              <div
+                className={cx("flex-align-justify-center", "button-with-icon")}
+              >
+                <div className={cx("btn-text")}>{block?.link?.text}</div>
+                <_Builtin.HtmlEmbed
+                  className={cx("icon-1x1-regular")}
+                  value="%3Csvg%20width%3D%22100%25%22%20height%3D%22100%25%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M12%2016L16%2012M16%2012L12%208M16%2012H8M22%2012C22%2017.5228%2017.5228%2022%2012%2022C6.47715%2022%202%2017.5228%202%2012C2%206.47715%206.47715%202%2012%202C17.5228%202%2022%206.47715%2022%2012Z%22%20stroke%3D%22currentColor%22%20stroke-width%3D%222%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%2F%3E%0A%3C%2Fsvg%3E"
+                />
+              </div>
+            </_Builtin.Link>
           </div>
         </div>
         <div className={cx("hero-half", "responsive-image")} />

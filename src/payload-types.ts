@@ -163,13 +163,10 @@ export interface Page {
             heading?: string | null;
             divider?: (number | null) | Media;
             description?: string | null;
-            links?:
-              | {
-                  text?: string | null;
-                  href?: string | null;
-                  id?: string | null;
-                }[]
-              | null;
+            link?: {
+              text?: string | null;
+              file?: (number | null) | Media;
+            };
             image?: (number | null) | Media;
             id?: string | null;
             blockName?: string | null;
@@ -529,12 +526,11 @@ export interface PagesSelect<T extends boolean = true> {
               heading?: T;
               divider?: T;
               description?: T;
-              links?:
+              link?:
                 | T
                 | {
                     text?: T;
-                    href?: T;
-                    id?: T;
+                    file?: T;
                   };
               image?: T;
               id?: T;

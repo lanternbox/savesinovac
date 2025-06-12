@@ -3,7 +3,7 @@ import nodemailer from "nodemailer";
 
 export async function POST(request) {
   try {
-    const { name, company, email, phone, message } = await request.json();
+    const { name, email, message } = await request.json();
 
     // Create email transporter with updated SSL settings
     const transporter = nodemailer.createTransport({
@@ -28,19 +28,15 @@ export async function POST(request) {
       from: process.env.SMTP_FROM_EMAIL,
       to: process.env.CONTACT_FORM_TO_EMAIL,
       bcc: process.env.CONTACT_FORM_BCC_EMAIL,
-      subject: `An inquiry from the River Delta website`,
+      subject: `From Save Sinovac website: We Want to Hear From You`,
       text: `
         Name: ${name}
-        Company: ${company}
         Email: ${email}
-        Phone: ${phone}
         Message: ${message}
       `,
       html: `
         <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Company:</strong> ${company}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
         <p><strong>Message:</strong> ${message}</p>
       `,
     };

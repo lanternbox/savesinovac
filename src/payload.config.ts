@@ -164,8 +164,8 @@ export default buildConfig({
     outputFile: path.resolve(dirname, "payload-types.ts"),
   },
   email: nodemailerAdapter({
-    defaultFromName: "River Delta",
-    defaultFromAddress: process.env.SMTP_FROM_EMAIL || "admin@lantern.digital",
+    defaultFromName: "Save Sinovac",
+    defaultFromAddress: process.env.SMTP_FROM_EMAIL || "",
     transportOptions: {
       host: process.env.SMTP_HOST,
       port: parseInt(process.env.SMTP_PORT || "587"),

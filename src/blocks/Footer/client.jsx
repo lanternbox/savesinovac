@@ -12,6 +12,41 @@ const cx = (...args) => _utils.cx(_styles, ...args);
 
 export function Client({ block }) {
   _interactions.useInteractions(_interactionsData, _styles);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const formData = new FormData(e.target);
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const response = await fetch("/api/form1", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        throw new Error(result.error || "Failed to send message");
+      }
+
+      console.log("Form submission successful:", result);
+      return true;
+    } catch (error) {
+      console.error("Detailed error:", {
+        message: error.message,
+        response: error.response,
+      });
+      return false;
+    }
+  };
   return (
     <div className={_styles.footerWrapper}>
       <div className={cx("section", "section-subfooter")}>
@@ -49,7 +84,8 @@ export function Client({ block }) {
                   <p className={cx("contact-text")}>{block?.excerpt}</p>
                   <_Builtin.FormWrapper
                     className={cx("mb-0", "_w-full")}
-                    id="Save-TU"
+                    id="Save-Sinovac"
+                    onSubmit={handleSubmit}
                   >
                     <_Builtin.FormForm
                       className={cx("form-flexxed")}
@@ -60,7 +96,7 @@ export function Client({ block }) {
                     >
                       <_Builtin.FormTextInput
                         className={cx("ms-input")}
-                        name="Full-Name"
+                        name="name"
                         maxLength={256}
                         data-name="Full Name"
                         placeholder="Full Name"
@@ -72,7 +108,7 @@ export function Client({ block }) {
                       />
                       <_Builtin.FormTextInput
                         className={cx("ms-input")}
-                        name="Email-Address"
+                        name="email"
                         maxLength={256}
                         data-name="Email Address"
                         placeholder="Enter Your Email"
@@ -84,7 +120,7 @@ export function Client({ block }) {
                       />
                       <_Builtin.FormTextarea
                         className={cx("ms-input", "anon-form")}
-                        name="Feedback-for-Sinovac"
+                        name="message"
                         maxLength={5000}
                         data-name="Feedback for Sinovac"
                         placeholder="Feedback for Sinovac (optional)"

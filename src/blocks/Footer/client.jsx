@@ -13,7 +13,7 @@ export function Client({ block }) {
   _interactions.useInteractions(_interactionsData, _styles);
   return (
     <>
-      {/* <div className={cx("section", "section-subfooter")}>
+      <div className={cx("section", "section-subfooter")}>
         <div className={cx("container-large")}>
           <div className={cx("home-flex-spacing-centered")}>
             <h3 className={cx("footer-h3")}>{block?.heading}</h3>
@@ -21,10 +21,11 @@ export function Client({ block }) {
               <div className={cx("contact-form-items-wrapper", "single-item")}>
                 <div className={cx("signature-form", "hidden")}>
                   <div className={cx("border-box-header-lined")}>
-                    {"For Media Inquiries"}
+                    {block?.subheading}
                   </div>
+                  <p className={cx("contact-text", "mb-0")}>{block?.title}</p>
                   <p className={cx("contact-text", "mb-0")}>
-                    {block?.paragraph}
+                    <a href={`mailto:${block?.["email"]}`}>{block?.email}</a>
                   </p>
                 </div>
                 <div
@@ -34,13 +35,17 @@ export function Client({ block }) {
                   )}
                 >
                   <div className={cx("border-box-header-lined")}>
-                    {"For Media Inquiries"}
+                    {block.subheading}
                   </div>
-                  <p className={cx("contact-text")}>{block?.["paragraph-2"]}</p>
+                  <p className={cx("contact-text")}>
+                    <strong>{block.title}</strong>
+                    <br />
+                    <a href={`mailto:${block?.email}`}>{block?.email}</a>
+                  </p>
                   <div className={cx("border-box-header-lined", "pt-2")}>
-                    {"Subscribe for Updates"}
+                    {block?.["subheading-2"]}
                   </div>
-                  <p className={cx("contact-text")}>{block?.["paragraph-3"]}</p>
+                  <p className={cx("contact-text")}>{block?.excerpt}</p>
                   <_Builtin.FormWrapper
                     className={cx("mb-0", "_w-full")}
                     id="Save-TU"
@@ -111,7 +116,7 @@ export function Client({ block }) {
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
       <section className={cx("section", "footer")}>
         <div className={cx("container-large")}>
           <div className={cx("footer-nav")}>
@@ -129,7 +134,7 @@ export function Client({ block }) {
                 image={block?.logo}
               />
             </_Builtin.Link>
-            {/* <div
+            <div
               className={cx("footer-nav-column", "wide")}
               id={cx("w-node-dcab04af-199a-c1c5-8338-07c0247120f1-eea1125b")}
             >
@@ -144,7 +149,7 @@ export function Client({ block }) {
                   {link?.text}
                 </_Builtin.Link>
               ))}
-            </div> */}
+            </div>
           </div>
         </div>
       </section>

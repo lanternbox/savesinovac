@@ -14,6 +14,32 @@ export const Footer: GlobalConfig = {
     {
       name: "heading",
       type: "text",
+      localized: true,
+    },
+    {
+      name: "subheading",
+      type: "text",
+      localized: true,
+    },
+    {
+      name: "title",
+      type: "text",
+      localized: true,
+    },
+    {
+      name: "email",
+      type: "text",
+      localized: true,
+    },
+    {
+      name: "subheading-2",
+      type: "text",
+      localized: true,
+    },
+    {
+      name: "excerpt",
+      type: "text",
+      localized: true,
     },
     {
       name: "logo",

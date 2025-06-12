@@ -736,6 +736,11 @@ export interface Navbar {
 export interface Footer {
   id: number;
   heading?: string | null;
+  subheading?: string | null;
+  title?: string | null;
+  email?: string | null;
+  'subheading-2'?: string | null;
+  excerpt?: string | null;
   logo?: (number | null) | Media;
   links?:
     | {
@@ -763,6 +768,11 @@ export interface NavbarSelect<T extends boolean = true> {
  */
 export interface FooterSelect<T extends boolean = true> {
   heading?: T;
+  subheading?: T;
+  title?: T;
+  email?: T;
+  'subheading-2'?: T;
+  excerpt?: T;
   logo?: T;
   links?:
     | T

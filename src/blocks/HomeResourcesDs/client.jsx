@@ -4,10 +4,12 @@ import React from "react";
 import * as _Builtin from "@/devlink/_Builtin";
 import * as _utils from "@/devlink/utils";
 import _styles from "./HomeResourcesDs.module.css";
+import { processFieldContent } from "@/utils/processFieldContent";
 
 const cx = (...args) => _utils.cx(_styles, ...args);
+const locale = "zh";
 
-export function Client({ block, items }) {
+export function Client({ block, items, icon }) {
   return (
     <section className={cx("section", "homepage-resources")}>
       <div className={cx("container-large")}>
@@ -32,9 +34,7 @@ export function Client({ block, items }) {
                               height="auto"
                               loading="lazy"
                               alt="Press Releases"
-                              image={{
-                                src: "https://cdn.prod.website-files.com/68492060de718a00c917aad2/68492060de718a00c917ab86_press.png",
-                              }}
+                              image={icon}
                             />
                           </_Builtin.Link>
                         </div>
@@ -52,16 +52,15 @@ export function Client({ block, items }) {
                         </_Builtin.Link>
                         <div className={cx("flex-resources")}>
                           <div className={cx("resource-details")}>
-                            {item?.date}
+                            {processFieldContent(
+                              "date-of-item-s-release",
+                              item,
+                              locale,
+                            )}
                           </div>
                           <div className={cx("resource-details")}>{"/ "}</div>
                           <div className={cx("resource-details")}>
-                            {item?.source}
-                          </div>
-                        </div>
-                        <div className={cx("resource-flex", "pt-1", "hidden")}>
-                          <div>
-                            {"This is some text inside of a div block."}
+                            {item?.["source-name"]}
                           </div>
                         </div>
                       </div>

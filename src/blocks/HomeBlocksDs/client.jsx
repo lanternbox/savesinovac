@@ -84,19 +84,6 @@ export function Client({ block, items, imageAccept, imageRedX }) {
               />
             ))}
           </div>
-          <div className={cx("text-align-center")}>
-            <div className={cx("dna-wrap new")}>
-              <_Builtin.Image
-                className={cx("dna-image", "sm", "mb-4")}
-                width="auto"
-                height="auto"
-                loading="lazy"
-                alt=""
-                image={block?.image}
-              />
-            </div>
-            <h2 className={cx("home-h2")}>{block?.["excerpt-3"]}</h2>
-          </div>
         </div>
       </div>
     </section>

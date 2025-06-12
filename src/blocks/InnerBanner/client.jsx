@@ -11,7 +11,7 @@ export function Client({ block }) {
     <div className={cx("hero-page-background")}>
       <_Builtin.Image
         className={cx("hero-page-background-image")}
-        src={block?.image}
+        image={block?.image}
       />
       <div className={cx("hero-wrapper", "page")}>
         <div className={cx("page-h1-heading")}>{block?.heading}</div>

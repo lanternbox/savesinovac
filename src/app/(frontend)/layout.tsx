@@ -12,6 +12,7 @@ import { LinkRenderer, ImageRenderer } from "@/renderers";
 
 // imports to uncomment
 import { Navbar } from "@/blocks/Navbar";
+import { NavbarSpacer } from "@/blocks/NavbarSpacer";
 import { Footer } from "@/blocks/Footer";
 // end imports to uncomment
 
@@ -57,6 +58,7 @@ export default async function RootLayout({
       <body>
         <DevLinkProvider renderLink={LinkRenderer} renderImage={ImageRenderer}>
           <Navbar locale={locale} />
+          <NavbarSpacer />
           <div className="loaded-wrap">{children}</div>
           <Footer locale={locale} />
         </DevLinkProvider>

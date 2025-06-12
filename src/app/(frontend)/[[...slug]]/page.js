@@ -9,6 +9,8 @@ import { HomeHeader } from "@/blocks/HomeHeader";
 import { HomeIntro } from "@/blocks/HomeIntro";
 import { HomeBlocksDs } from "@/blocks/HomeBlocksDs";
 import { HomeResourcesDs } from "@/blocks/HomeResourcesDs";
+import { InnerBanner } from "@/blocks/InnerBanner";
+import { InnerPost } from "@/blocks/InnerPost";
 
 // end added block imports
 
@@ -18,6 +20,8 @@ const blockComponents = {
   HomeIntro,
   HomeBlocksDs,
   HomeResourcesDs,
+  InnerBanner,
+  InnerPost,
   // end added block component names
 };
 

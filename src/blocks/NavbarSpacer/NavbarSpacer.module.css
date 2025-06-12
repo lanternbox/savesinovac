@@ -1,0 +1,21 @@
+.navbar-spacer {
+  height: 85px;
+}
+
+@media (max-width: 991px) {
+  .navbar-spacer {
+    height: 80px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-spacer {
+    height: 70px;
+  }
+}
+
+@media (max-width: 479px) {
+  .navbar-spacer {
+    height: 60px;
+  }
+}

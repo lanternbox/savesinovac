@@ -217,6 +217,33 @@ export interface Page {
             blockName?: string | null;
             blockType: 'HomeResourcesDs';
           }
+        | {
+            image?: (number | null) | Media;
+            heading?: string | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'InnerBanner';
+          }
+        | {
+            body?: {
+              root: {
+                type: string;
+                children: {
+                  type: string;
+                  version: number;
+                  [k: string]: unknown;
+                }[];
+                direction: ('ltr' | 'rtl') | null;
+                format: 'left' | 'start' | 'center' | 'right' | 'end' | 'justify' | '';
+                indent: number;
+                version: number;
+              };
+              [k: string]: unknown;
+            } | null;
+            id?: string | null;
+            blockName?: string | null;
+            blockType: 'InnerPost';
+          }
       )[]
     | null;
   seo?: {
@@ -526,6 +553,21 @@ export interface PagesSelect<T extends boolean = true> {
           | T
           | {
               heading?: T;
+              id?: T;
+              blockName?: T;
+            };
+        InnerBanner?:
+          | T
+          | {
+              image?: T;
+              heading?: T;
+              id?: T;
+              blockName?: T;
+            };
+        InnerPost?:
+          | T
+          | {
+              body?: T;
               id?: T;
               blockName?: T;
             };

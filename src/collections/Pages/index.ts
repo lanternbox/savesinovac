@@ -10,6 +10,8 @@ import { HomeBlocksDs } from "@/blocks/HomeBlocksDs/config";
 import { HomeHeader } from "@/blocks/HomeHeader/config";
 import { HomeIntro } from "@/blocks/HomeIntro/config";
 import { HomeResourcesDs } from "@/blocks/HomeResourcesDs/config";
+import { InnerBanner } from "@/blocks/InnerBanner/config";
+import { InnerPost } from "@/blocks/InnerPost/config";
 // import { Navbar } from "@/blocks/Navbar/config";
 // import { Footer } from "@/blocks/Footer/config";
 // end added block imports
@@ -117,6 +119,8 @@ export const Pages: CollectionConfig = {
                 HomeHeader,
                 HomeIntro,
                 HomeResourcesDs,
+                InnerBanner,
+                InnerPost,
                 // Navbar
                 // Footer,
                 // end added blocks

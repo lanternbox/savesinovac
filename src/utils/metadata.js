@@ -1,7 +1,7 @@
 export function generateCommonMetadata(item, locale) {
   const strings = {
     zh: {
-      siteTitle: "劳氏船级社",
+      siteTitle: "Save Sinovac",
     },
   };
   const defaultPageTitle = `${strings[locale]?.siteTitle} | ${item.name}`;

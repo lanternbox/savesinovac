@@ -6,6 +6,7 @@ import * as _Builtin from "@/devlink/_Builtin";
 import * as _interactions from "@/devlink/interactions";
 import * as _utils from "@/devlink/utils";
 import * as _styles from "./Footer.module.css";
+import Link from "next/link";
 
 const cx = (...args) => _utils.cx(_styles, ...args);
 
@@ -120,12 +121,7 @@ export function Client({ block }) {
       <section className={cx("section", "footer")}>
         <div className={cx("container-large")}>
           <div className={cx("footer-nav")}>
-            <_Builtin.Link
-              className={cx("footer-logo-link-wrap")}
-              options={{
-                href: "/",
-              }}
-            >
+            <Link className={cx("footer-logo-link-wrap")} href="/">
               <_Builtin.Image
                 className={cx("footer-logo")}
                 width="auto"
@@ -133,21 +129,19 @@ export function Client({ block }) {
                 loading="lazy"
                 image={block?.logo}
               />
-            </_Builtin.Link>
+            </Link>
             <div
               className={cx("footer-nav-column", "wide")}
               id={cx("w-node-dcab04af-199a-c1c5-8338-07c0247120f1-eea1125b")}
             >
               {block?.links?.map((link, index) => (
-                <_Builtin.Link
+                <Link
                   key={index}
                   className={cx("btn-footer_nav")}
-                  options={{
-                    href: link?.href,
-                  }}
+                  href={link?.href}
                 >
                   {link?.text}
-                </_Builtin.Link>
+                </Link>
               ))}
             </div>
           </div>

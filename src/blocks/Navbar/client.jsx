@@ -4,6 +4,7 @@ import React from "react";
 import * as _Builtin from "@/devlink/_Builtin";
 import * as _utils from "@/devlink/utils";
 import _styles from "./Navbar.module.css";
+import Link from "next/link";
 
 const cx = (...args) => _utils.cx(_styles, ...args);
 
@@ -13,12 +14,7 @@ export function Client({ block }) {
       <div className={cx("navbar")}>
         <div className={cx("navigation-centre")}>
           <div className={cx("navigation-logo-top")}>
-            <_Builtin.Link
-              className={cx("brand")}
-              options={{
-                href: "/",
-              }}
-            >
+            <Link className={cx("brand")} href="/">
               <_Builtin.Image
                 className={cx("logo")}
                 width="auto"
@@ -26,7 +22,7 @@ export function Client({ block }) {
                 loading="lazy"
                 image={block?.logo}
               />
-            </_Builtin.Link>
+            </Link>
           </div>
         </div>
       </div>

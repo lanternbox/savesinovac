@@ -16,12 +16,12 @@ const translations = {
   placeholders: {
     fullName: "姓名",
     email: "请输入您的电子邮件",
-    feedback: "对科兴的反馈（可选）"
+    feedback: "对科兴的反馈（可选）",
   },
   submit: "提交",
   wait: "请稍候...",
   success: "谢谢！您的提交已收到！",
-  error: "哎呀！提交表单时出了问题。"
+  error: "哎呀！提交表单时出了问题。",
 };
 
 export function Client({ block }) {
@@ -116,7 +116,7 @@ export function Client({ block }) {
                         placeholder={translations.placeholders.fullName}
                         disabled={false}
                         type="text"
-                        required={false}
+                        required={true}
                         autoFocus={false}
                         id="Full-Name"
                       />
@@ -128,7 +128,7 @@ export function Client({ block }) {
                         placeholder={translations.placeholders.email}
                         disabled={false}
                         type="email"
-                        required={false}
+                        required={true}
                         autoFocus={false}
                         id="Email-Address"
                       />
@@ -150,14 +150,10 @@ export function Client({ block }) {
                       />
                     </_Builtin.FormForm>
                     <_Builtin.FormSuccessMessage>
-                      <div>
-                        {translations.success}
-                      </div>
+                      <div>{translations.success}</div>
                     </_Builtin.FormSuccessMessage>
                     <_Builtin.FormErrorMessage>
-                      <div>
-                        {translations.error}
-                      </div>
+                      <div>{translations.error}</div>
                     </_Builtin.FormErrorMessage>
                   </_Builtin.FormWrapper>
                 </div>

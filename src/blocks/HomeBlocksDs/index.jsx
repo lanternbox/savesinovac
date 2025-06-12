@@ -13,5 +13,35 @@ export async function HomeBlocksDs({ block, locale }) {
     locale: locale,
   });
 
-  return <Client block={block} items={items} locale={locale} />;
+  const imageAcceptResult = await payload.find({
+    collection: "media",
+    where: {
+      filename: {
+        equals: "68492060de718a00c917ab30.png",
+      },
+    },
+    locale: locale,
+  });
+  const imageAccept = imageAcceptResult.docs[0];
+
+  const imageRedXResult = await payload.find({
+    collection: "media",
+    where: {
+      filename: {
+        equals: "68492060de718a00c917ab68.png",
+      },
+    },
+    locale: locale,
+  });
+  const imageRedX = imageRedXResult.docs[0];
+
+  return (
+    <Client
+      block={block}
+      items={items}
+      locale={locale}
+      imageAccept={imageAccept}
+      imageRedX={imageRedX}
+    />
+  );
 }

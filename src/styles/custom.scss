@@ -1,3 +1,22 @@
 html {
-  font-size: calc(0.8126951092611863rem + 0.20811654526534862vw);
+  font-size: calc(0.625rem + 0.41666666666666663vw);
+}
+@media screen and (max-width: 1920px) {
+  html {
+    font-size: calc(0.625rem + 0.41666666666666674vw);
+  }
+}
+@media screen and (max-width: 1440px) {
+  html {
+    font-size: calc(0.8126951092611863rem + 0.20811654526534862vw);
+  }
+}
+@media screen and (max-width: 479px) {
+  html {
+    font-size: calc(0.7494769874476988rem + 0.8368200836820083vw);
+  }
+}
+
+.w-dyn-list .w-dyn-item:nth-child(6) h3 {
+  border-bottom-color: #00a859;
 }

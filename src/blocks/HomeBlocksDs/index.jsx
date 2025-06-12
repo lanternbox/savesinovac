@@ -28,7 +28,7 @@ export async function HomeBlocksDs({ block, locale }) {
     collection: "media",
     where: {
       filename: {
-        equals: "68492060de718a00c917ab68.png",
+        equals: "68492060de718a00c917abba.png",
       },
     },
     locale: locale,

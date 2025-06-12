@@ -25,7 +25,9 @@ export function Client({ block, items, icon }) {
                         <div className={cx("resoure-image-icon")}>
                           <_Builtin.Link
                             options={{
-                              href: `/collection/${item?.slug}`,
+                              href:
+                                item?.["downloadable-material-file"]?.url ||
+                                item?.["news-or-material-link"],
                             }}
                           >
                             <_Builtin.Image
@@ -43,7 +45,9 @@ export function Client({ block, items, icon }) {
                         <_Builtin.Link
                           className={cx("resource-link")}
                           options={{
-                            href: `/collection/${item?.slug}`,
+                            href:
+                              item?.["downloadable-material-file"]?.url ||
+                              item?.["news-or-material-link"],
                           }}
                         >
                           <h6 className={cx("resource-heading")}>

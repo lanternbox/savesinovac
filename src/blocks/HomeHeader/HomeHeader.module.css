@@ -1071,6 +1071,7 @@
 .flex-align-justify-center.button-with-icon {
   grid-column-gap: 0.5rem;
   grid-row-gap: 0.5rem;
+  align-items: flex-end !important;
 }
 
 @media screen and (max-width: 767px) {

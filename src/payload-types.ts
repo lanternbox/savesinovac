@@ -153,6 +153,8 @@ export interface Page {
             heading?: string | null;
             excerpt?: string | null;
             'excerpt-2'?: string | null;
+            image?: (number | null) | Media;
+            'excerpt-3'?: string | null;
             id?: string | null;
             blockName?: string | null;
             blockType: 'HomeBlocksDs';
@@ -489,6 +491,8 @@ export interface PagesSelect<T extends boolean = true> {
               heading?: T;
               excerpt?: T;
               'excerpt-2'?: T;
+              image?: T;
+              'excerpt-3'?: T;
               id?: T;
               blockName?: T;
             };

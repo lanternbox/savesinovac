@@ -18,5 +18,15 @@ export const HomeBlocksDs: Block = {
       type: "text",
       localized: true,
     },
+    {
+      name: "image",
+      type: "upload",
+      relationTo: "media",
+    },
+    {
+      name: "excerpt-3",
+      type: "text",
+      localized: true,
+    },
   ],
 };

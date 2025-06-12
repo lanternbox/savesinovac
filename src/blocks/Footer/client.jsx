@@ -5,14 +5,14 @@ import { _interactionsData } from "./interactions.js";
 import * as _Builtin from "@/devlink/_Builtin";
 import * as _interactions from "@/devlink/interactions";
 import * as _utils from "@/devlink/utils";
-import _styles from "./Footer.module.css";
+import * as _styles from "./Footer.module.css";
 
 const cx = (...args) => _utils.cx(_styles, ...args);
 
 export function Client({ block }) {
   _interactions.useInteractions(_interactionsData, _styles);
   return (
-    <>
+    <div className={_styles.footerWrapper}>
       <div className={cx("section", "section-subfooter")}>
         <div className={cx("container-large")}>
           <div className={cx("home-flex-spacing-centered")}>
@@ -153,6 +153,6 @@ export function Client({ block }) {
           </div>
         </div>
       </section>
-    </>
+    </div>
   );
 }

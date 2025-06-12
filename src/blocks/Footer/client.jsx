@@ -7,8 +7,22 @@ import * as _interactions from "@/devlink/interactions";
 import * as _utils from "@/devlink/utils";
 import * as _styles from "./Footer.module.css";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const cx = (...args) => _utils.cx(_styles, ...args);
+
+// Chinese translations for hardcoded text
+const translations = {
+  placeholders: {
+    fullName: "姓名",
+    email: "请输入您的电子邮件",
+    feedback: "对科兴的反馈（可选）"
+  },
+  submit: "提交",
+  wait: "请稍候...",
+  success: "谢谢！您的提交已收到！",
+  error: "哎呀！提交表单时出了问题。"
+};
 
 export function Client({ block }) {
   _interactions.useInteractions(_interactionsData, _styles);
@@ -99,7 +113,7 @@ export function Client({ block }) {
                         name="name"
                         maxLength={256}
                         data-name="Full Name"
-                        placeholder="Full Name"
+                        placeholder={translations.placeholders.fullName}
                         disabled={false}
                         type="text"
                         required={false}
@@ -111,7 +125,7 @@ export function Client({ block }) {
                         name="email"
                         maxLength={256}
                         data-name="Email Address"
-                        placeholder="Enter Your Email"
+                        placeholder={translations.placeholders.email}
                         disabled={false}
                         type="email"
                         required={false}
@@ -123,7 +137,7 @@ export function Client({ block }) {
                         name="message"
                         maxLength={5000}
                         data-name="Feedback for Sinovac"
-                        placeholder="Feedback for Sinovac (optional)"
+                        placeholder={translations.placeholders.feedback}
                         required={false}
                         autoFocus={false}
                         id="Feedback-for-Sinovac"
@@ -131,20 +145,18 @@ export function Client({ block }) {
                       <_Builtin.FormButton
                         className={cx("button-submit", "is-rounded")}
                         type="submit"
-                        value="Submit"
-                        data-wait="Please wait..."
+                        value={translations.submit}
+                        data-wait={translations.wait}
                       />
                     </_Builtin.FormForm>
                     <_Builtin.FormSuccessMessage>
                       <div>
-                        {"Thank you! Your submission has been received!"}
+                        {translations.success}
                       </div>
                     </_Builtin.FormSuccessMessage>
                     <_Builtin.FormErrorMessage>
                       <div>
-                        {
-                          "Oops! Something went wrong while submitting the form."
-                        }
+                        {translations.error}
                       </div>
                     </_Builtin.FormErrorMessage>
                   </_Builtin.FormWrapper>

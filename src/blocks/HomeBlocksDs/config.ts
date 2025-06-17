@@ -1,6 +1,10 @@
 import { Block } from "payload";
 
 export const HomeBlocksDs: Block = {
+  labels: {
+    singular: "Home Blocks",
+    plural: "Home Blocks",
+  },
   slug: "HomeBlocksDs",
   fields: [
     {

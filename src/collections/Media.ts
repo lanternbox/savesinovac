@@ -46,15 +46,10 @@ export const Media: CollectionConfig = {
   },
   fields: [
     {
-      name: "webflowId",
-      type: "text",
-      // hidden: true,
-    },
-    {
       name: "alt",
       type: "text",
       // required: true,
-      // hidden: true,
+      hidden: true,
     },
     {
       name: "caption",

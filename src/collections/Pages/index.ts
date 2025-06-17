@@ -49,12 +49,6 @@ export const Pages: CollectionConfig = {
           label: "General",
           fields: [
             {
-              name: "webflowId",
-              type: "text",
-              admin: { description: "The original Webflow ID for this item" },
-              // hidden: true,
-            },
-            {
               name: "order",
               type: "number",
             },
@@ -139,6 +133,10 @@ export const Pages: CollectionConfig = {
                   name: "title",
                   type: "text",
                   localized: true,
+                  admin: {
+                    description:
+                      "If left blank, the title will be populated from the page's name.",
+                  },
                 },
                 {
                   name: "description",

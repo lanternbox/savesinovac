@@ -6,9 +6,14 @@ export const Resources: CollectionConfig = {
   slug: "resources",
   admin: {
     useAsTitle: "name",
-    defaultColumns: ["name", "slug", "order"],
+    defaultColumns: [
+      "name",
+      "source-name",
+      "date-of-item-s-release",
+      "updatedAt",
+    ],
   },
-  defaultSort: "order",
+  defaultSort: "-date-of-item-s-release",
   access: {
     read: () => true,
     create: () => true,
@@ -21,71 +26,36 @@ export const Resources: CollectionConfig = {
   },
   fields: [
     {
-      name: "webflowId",
-      type: "text",
-      admin: {
-        description: "The original Webflow ID for this item",
-      },
-    },
-    {
       name: "name",
       type: "text",
       required: true,
       localized: true,
     },
     {
-      name: "slug",
-      type: "text",
-      required: true,
-    },
-    {
-      name: "order",
-      type: "number",
-    },
-    {
+      label: "Release Date",
       name: "date-of-item-s-release",
       type: "date",
     },
     {
-      name: "type-of-item",
-      type: "select",
-      options: [
-        {
-          label: "Press Releases",
-          value: "Press Releases",
-        },
-        {
-          label: "Media Coverage",
-          value: "Media Coverage",
-        },
-        {
-          label: "Important Filings",
-          value: "Important Filings",
-        },
-        {
-          label: "Important Materials",
-          value: "Important Materials",
-        },
-        {
-          label: "Presentations",
-          value: "Presentations",
-        },
-      ],
+      label: "Source",
+      name: "source-name",
+      type: "text",
+      localized: true,
     },
     {
+      label: "Link",
       name: "news-or-material-link",
       type: "text",
       localized: true,
     },
     {
+      label: "Download",
       name: "downloadable-material-file",
       type: "upload",
       relationTo: "media",
-    },
-    {
-      name: "source-name",
-      type: "text",
-      localized: true,
+      admin: {
+        description: "If set, will override link.",
+      },
     },
   ],
 };

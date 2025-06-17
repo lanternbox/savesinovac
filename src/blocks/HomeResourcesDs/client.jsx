@@ -26,8 +26,8 @@ export function Client({ block, items, icon }) {
                           <_Builtin.Link
                             options={{
                               href:
-                                item?.["downloadable-material-file"]?.url ||
-                                item?.["news-or-material-link"],
+                                item?.["news-or-material-link"] ||
+                                item?.["downloadable-material-file"]?.url,
                             }}
                           >
                             <_Builtin.Image

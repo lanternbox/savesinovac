@@ -131,10 +131,6 @@ export interface UserAuthOperations {
  */
 export interface Page {
   id: number;
-  /**
-   * The original Webflow ID for this item
-   */
-  webflowId?: string | null;
   order?: number | null;
   slug: string;
   name: string;
@@ -244,6 +240,9 @@ export interface Page {
       )[]
     | null;
   seo?: {
+    /**
+     * If left blank, the title will be populated from the page's name.
+     */
     title?: string | null;
     description?: string | null;
   };
@@ -265,7 +264,6 @@ export interface Page {
  */
 export interface Media {
   id: number;
-  webflowId?: string | null;
   alt?: string | null;
   caption?: {
     root: {
@@ -350,16 +348,9 @@ export interface Media {
  */
 export interface HomepageBlock {
   id: number;
-  /**
-   * The original Webflow ID for this item
-   */
-  webflowId?: string | null;
   name: string;
-  slug: string;
   order?: number | null;
   'show-checkbox-or-red-x'?: ('Red X' | 'Green Checkbox') | null;
-  'icon-logo'?: (number | null) | Media;
-  'invert-icon'?: string | null;
   'block-copy'?: {
     root: {
       type: string;
@@ -375,11 +366,6 @@ export interface HomepageBlock {
     };
     [k: string]: unknown;
   } | null;
-  link?: string | null;
-  'background-color'?: string | null;
-  'text-color'?: string | null;
-  'border-color'?: string | null;
-  'background-image'?: (number | null) | Media;
   updatedAt: string;
   createdAt: string;
 }
@@ -389,20 +375,14 @@ export interface HomepageBlock {
  */
 export interface Resource {
   id: number;
-  /**
-   * The original Webflow ID for this item
-   */
-  webflowId?: string | null;
   name: string;
-  slug: string;
-  order?: number | null;
   'date-of-item-s-release'?: string | null;
-  'type-of-item'?:
-    | ('Press Releases' | 'Media Coverage' | 'Important Filings' | 'Important Materials' | 'Presentations')
-    | null;
-  'news-or-material-link'?: string | null;
-  'downloadable-material-file'?: (number | null) | Media;
   'source-name'?: string | null;
+  'news-or-material-link'?: string | null;
+  /**
+   * If set, will override link.
+   */
+  'downloadable-material-file'?: (number | null) | Media;
   updatedAt: string;
   createdAt: string;
 }
@@ -499,7 +479,6 @@ export interface PayloadMigration {
  * via the `definition` "pages_select".
  */
 export interface PagesSelect<T extends boolean = true> {
-  webflowId?: T;
   order?: T;
   slug?: T;
   name?: T;
@@ -591,19 +570,10 @@ export interface PagesSelect<T extends boolean = true> {
  * via the `definition` "homepage-blocks_select".
  */
 export interface HomepageBlocksSelect<T extends boolean = true> {
-  webflowId?: T;
   name?: T;
-  slug?: T;
   order?: T;
   'show-checkbox-or-red-x'?: T;
-  'icon-logo'?: T;
-  'invert-icon'?: T;
   'block-copy'?: T;
-  link?: T;
-  'background-color'?: T;
-  'text-color'?: T;
-  'border-color'?: T;
-  'background-image'?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -612,15 +582,11 @@ export interface HomepageBlocksSelect<T extends boolean = true> {
  * via the `definition` "resources_select".
  */
 export interface ResourcesSelect<T extends boolean = true> {
-  webflowId?: T;
   name?: T;
-  slug?: T;
-  order?: T;
   'date-of-item-s-release'?: T;
-  'type-of-item'?: T;
+  'source-name'?: T;
   'news-or-material-link'?: T;
   'downloadable-material-file'?: T;
-  'source-name'?: T;
   updatedAt?: T;
   createdAt?: T;
 }
@@ -629,7 +595,6 @@ export interface ResourcesSelect<T extends boolean = true> {
  * via the `definition` "media_select".
  */
 export interface MediaSelect<T extends boolean = true> {
-  webflowId?: T;
   alt?: T;
   caption?: T;
   updatedAt?: T;
